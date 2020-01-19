@@ -1,0 +1,118 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://Scripts/Mode.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Screens/mode.PNG" type="Texture" id=2]
+[ext_resource path="res://Assets/Button/GoBackButton.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Button/2players.png" type="Texture" id=4]
+[ext_resource path="res://Assets/Button/3players.png" type="Texture" id=5]
+[ext_resource path="res://Assets/Button/4players.png" type="Texture" id=6]
+[ext_resource path="res://Assets/Audio/Crack the Underground Base (Long - OGG).ogg" type="AudioStream" id=7]
+[ext_resource path="res://Assets/Audio/mode.wav" type="AudioStream" id=8]
+
+[sub_resource type="Animation" id=2]
+resource_name = "Blink"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("GoBackButton/Sprite:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+
+[sub_resource type="Animation" id=1]
+resource_name = "Intro"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0.00392157 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 489.377, 301.033 )
+scale = Vector2( 1.1, 1.1 )
+texture = ExtResource( 2 )
+
+[node name="GoBackButton" type="Area2D" parent="."]
+editor/display_folded = true
+position = Vector2( 27.6089, -122.06 )
+
+[node name="Sprite" type="Sprite" parent="GoBackButton"]
+position = Vector2( 101.247, 544.585 )
+scale = Vector2( 0.391513, 0.455369 )
+texture = ExtResource( 3 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="GoBackButton"]
+polygon = PoolVector2Array( 104.898, 501.518, 184.396, 503.304, 193.775, 509.557, 193.775, 575.21, 185.736, 584.142, 16.4678, 584.589, 7.53548, 576.996, 6.64225, 511.343, 13.3415, 504.197, 62.0229, 502.411 )
+
+[node name="Animation" type="AnimationPlayer" parent="."]
+autoplay = "Intro"
+anims/Blink = SubResource( 2 )
+anims/Intro = SubResource( 1 )
+
+[node name="2Players" type="Area2D" parent="."]
+editor/display_folded = true
+
+[node name="Sprite" type="Sprite" parent="2Players"]
+position = Vector2( 206.999, 266.554 )
+scale = Vector2( 0.425607, 0.504511 )
+texture = ExtResource( 4 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="2Players"]
+polygon = PoolVector2Array( 79.0803, 213.365, 335.37, 214.407, 344.747, 220.137, 347.872, 300.879, 341.1, 316.506, 147.841, 320.153, 78.5594, 319.632, 67.6202, 308.693, 67.6202, 246.183, 69.1829, 221.179 )
+
+[node name="3Players" type="Area2D" parent="."]
+
+[node name="Sprite" type="Sprite" parent="3Players"]
+position = Vector2( 521.825, 266.554 )
+scale = Vector2( 0.425607, 0.504511 )
+texture = ExtResource( 5 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="3Players"]
+polygon = PoolVector2Array( 408.298, 213.886, 650.524, 215.449, 659.9, 225.346, 660.421, 308.693, 647.919, 320.153, 390.587, 318.59, 382.774, 308.693, 381.211, 230.556, 386.941, 218.575, 403.089, 214.407 )
+
+[node name="4Players" type="Area2D" parent="."]
+
+[node name="Sprite" type="Sprite" parent="4Players"]
+position = Vector2( 823.158, 266.554 )
+scale = Vector2( 0.425607, 0.504511 )
+texture = ExtResource( 6 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="4Players"]
+polygon = PoolVector2Array( 709.908, 210.24, 952.654, 212.845, 962.552, 225.867, 962.031, 315.465, 925.046, 320.153, 707.824, 318.069, 690.113, 316.507, 682.82, 290.461, 682.82, 235.244, 687.509, 216.491, 701.573, 211.282 )
+
+[node name="Music" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 7 )
+autoplay = true
+
+[node name="Mode" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 8 )
+[connection signal="input_event" from="GoBackButton" to="." method="_on_GoBackButton_input_event"]
+[connection signal="mouse_entered" from="GoBackButton" to="." method="_on_GoBackButton_mouse_entered"]
+[connection signal="mouse_exited" from="GoBackButton" to="." method="_on_GoBackButton_mouse_exited"]
+[connection signal="animation_finished" from="Animation" to="." method="_on_Animation_animation_finished"]
+[connection signal="input_event" from="2Players" to="." method="_on_2Players_input_event"]
+[connection signal="mouse_entered" from="2Players" to="." method="_on_2Players_mouse_entered"]
+[connection signal="mouse_exited" from="2Players" to="." method="_on_2Players_mouse_exited"]
+[connection signal="input_event" from="3Players" to="." method="_on_3Players_input_event"]
+[connection signal="mouse_entered" from="3Players" to="." method="_on_3Players_mouse_entered"]
+[connection signal="mouse_exited" from="3Players" to="." method="_on_3Players_mouse_exited"]
+[connection signal="input_event" from="4Players" to="." method="_on_4Players_input_event"]
+[connection signal="mouse_entered" from="4Players" to="." method="_on_4Players_mouse_entered"]
+[connection signal="mouse_exited" from="4Players" to="." method="_on_4Players_mouse_exited"]

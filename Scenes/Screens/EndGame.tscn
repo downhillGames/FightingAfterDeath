@@ -1,0 +1,147 @@
+[gd_scene load_steps=18 format=2]
+
+[ext_resource path="res://Scripts/EndGame.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Screens/FightingAfterDeathPlayer1.PNG" type="Texture" id=2]
+[ext_resource path="res://Assets/Screens/FightingAfterDeathDraw.PNG" type="Texture" id=3]
+[ext_resource path="res://Assets/Screens/FightingAfterDeathPlayer2.PNG" type="Texture" id=4]
+[ext_resource path="res://Assets/Screens/FightingAfterDeathPlayer3.PNG" type="Texture" id=5]
+[ext_resource path="res://Assets/Screens/FightingAfterDeathPlayer4.PNG" type="Texture" id=6]
+[ext_resource path="res://Assets/Screens/skull.png" type="Texture" id=7]
+[ext_resource path="res://Assets/Button/QuitButton.png" type="Texture" id=8]
+[ext_resource path="res://Assets/Button/MenuButton.png" type="Texture" id=9]
+[ext_resource path="res://Assets/Audio/Crack the Underground Base (Long - OGG).ogg" type="AudioStream" id=10]
+[ext_resource path="res://Assets/Audio/Player1Wins.wav" type="AudioStream" id=11]
+[ext_resource path="res://Assets/Audio/Player2Wins.wav" type="AudioStream" id=12]
+[ext_resource path="res://Assets/Audio/Player3Wins.wav" type="AudioStream" id=13]
+[ext_resource path="res://Assets/Audio/Player4Wins.wav" type="AudioStream" id=14]
+[ext_resource path="res://Assets/Audio/NoWinner.wav" type="AudioStream" id=15]
+
+[sub_resource type="Animation" id=1]
+resource_name = "Blink"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("MenuButton/Sprite:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("QuitButton/Sprite:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+
+[sub_resource type="Animation" id=2]
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[node name="EndGame" type="Node2D"]
+modulate = Color( 1, 1, 1, 0.75 )
+script = ExtResource( 1 )
+
+[node name="player_one_won" type="Sprite" parent="."]
+visible = false
+position = Vector2( 516.698, 296.38 )
+texture = ExtResource( 2 )
+
+[node name="game_draw" type="Sprite" parent="."]
+visible = false
+position = Vector2( 514.075, 243.924 )
+texture = ExtResource( 3 )
+
+[node name="player_two_won" type="Sprite" parent="."]
+visible = false
+position = Vector2( 523.255, 257.038 )
+texture = ExtResource( 4 )
+
+[node name="player_three_won" type="Sprite" parent="."]
+visible = false
+position = Vector2( 520.731, 297.673 )
+scale = Vector2( 0.934806, 1.01847 )
+texture = ExtResource( 5 )
+
+[node name="player_four_won" type="Sprite" parent="."]
+visible = false
+position = Vector2( 521.478, 294.87 )
+scale = Vector2( 0.940237, 1.06892 )
+texture = ExtResource( 6 )
+
+[node name="skull" type="Sprite" parent="."]
+position = Vector2( 122.012, 247.494 )
+texture = ExtResource( 7 )
+
+[node name="Animation" type="AnimationPlayer" parent="."]
+autoplay = "Intro"
+anims/Blink = SubResource( 1 )
+anims/Intro = SubResource( 2 )
+
+[node name="QuitButton" type="Area2D" parent="."]
+
+[node name="Sprite" type="Sprite" parent="QuitButton"]
+position = Vector2( 664.236, 408.483 )
+scale = Vector2( 0.524947, 0.541547 )
+texture = ExtResource( 8 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="QuitButton"]
+polygon = PoolVector2Array( 579.784, 354.664, 740.656, 356.251, 749.119, 360.953, 752.88, 368.945, 753.82, 447.926, 745.828, 457.798, 714.8, 460.619, 581.754, 459.679, 573.292, 453.567, 566.71, 436.643, 568.121, 391.981, 567.412, 370.004, 569.886, 360.602 )
+
+[node name="MenuButton" type="Area2D" parent="."]
+editor/display_folded = true
+
+[node name="Sprite" type="Sprite" parent="MenuButton"]
+position = Vector2( 355.453, 403.397 )
+scale = Vector2( 0.506027, 0.562607 )
+texture = ExtResource( 9 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="MenuButton"]
+polygon = PoolVector2Array( 320.404, 348.781, 432.293, 349.722, 442.166, 355.833, 444.987, 365.706, 444.987, 437.635, 442.166, 451.739, 431.823, 456.44, 282.324, 456.44, 269.16, 451.739, 265.869, 426.352, 265.869, 373.228, 267.28, 358.184, 274.802, 352.072, 280.443, 348.781 )
+
+[node name="Music" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 10 )
+autoplay = true
+
+[node name="Player1Wins" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 11 )
+
+[node name="Player2Wins" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 12 )
+
+[node name="Player3Wins" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 13 )
+
+[node name="Player4Wins" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 14 )
+
+[node name="NoWinner" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 15 )
+[connection signal="animation_finished" from="Animation" to="." method="_on_Animation_animation_finished"]
+[connection signal="input_event" from="QuitButton" to="." method="_on_QuitButton_input_event"]
+[connection signal="mouse_entered" from="QuitButton" to="." method="_on_QuitButton_mouse_entered"]
+[connection signal="mouse_exited" from="QuitButton" to="." method="_on_QuitButton_mouse_exited"]
+[connection signal="input_event" from="MenuButton" to="." method="_on_MenuButton_input_event"]
+[connection signal="mouse_entered" from="MenuButton" to="." method="_on_MenuButton_mouse_entered"]
+[connection signal="mouse_exited" from="MenuButton" to="." method="_on_MenuButton_mouse_exited"]

@@ -1,0 +1,194 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://Scripts/Level_Select.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Screens/levelSelect.PNG" type="Texture" id=2]
+[ext_resource path="res://Assets/Levels/Level1.PNG" type="Texture" id=3]
+[ext_resource path="res://Assets/Levels/Level2.PNG" type="Texture" id=4]
+[ext_resource path="res://Assets/Levels/Level3.PNG" type="Texture" id=5]
+[ext_resource path="res://Assets/Levels/Level4.PNG" type="Texture" id=6]
+[ext_resource path="res://Assets/Levels/Level5.PNG" type="Texture" id=7]
+[ext_resource path="res://Assets/Levels/Level6.PNG" type="Texture" id=8]
+[ext_resource path="res://Assets/Levels/Level7.PNG" type="Texture" id=9]
+[ext_resource path="res://Assets/Levels/Level8.PNG" type="Texture" id=10]
+[ext_resource path="res://Assets/Button/GoBackButton.png" type="Texture" id=11]
+[ext_resource path="res://Assets/Audio/Crack the Underground Base (Long - OGG).ogg" type="AudioStream" id=12]
+[ext_resource path="res://Assets/Audio/LevelSelection.wav" type="AudioStream" id=13]
+
+[sub_resource type="Animation" id=1]
+resource_name = "Blink"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("GoBackButton/Sprite:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "Start"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 515.146, 289.014 )
+scale = Vector2( 1.31849, 1.53686 )
+texture = ExtResource( 2 )
+
+[node name="Level1" type="Area2D" parent="."]
+editor/display_folded = true
+position = Vector2( 135, 205 )
+scale = Vector2( 0.226151, 0.221764 )
+
+[node name="level1" type="Sprite" parent="Level1"]
+texture = ExtResource( 3 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Level1"]
+polygon = PoolVector2Array( -424.264, -297.166, 434.192, -290.259, 488.375, -257.452, 501.92, -122.77, 491.761, 243.29, 403.714, 295.091, -166.897, 308.905, -427.651, 289.911, -508.925, 207.03, -502.152, -38.1614, -497.072, -224.645 )
+
+[node name="Level2" type="Area2D" parent="."]
+editor/display_folded = true
+
+[node name="level2" type="Sprite" parent="Level2"]
+position = Vector2( 390, 205 )
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 4 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Level2"]
+polygon = PoolVector2Array( 312.057, 135.374, 487.241, 136.859, 501.592, 147.251, 502.581, 260.576, 484.766, 272.948, 308.098, 272.948, 289.293, 270.473, 276.921, 256.122, 275.932, 185.356, 278.901, 149.23, 297.211, 136.859 )
+
+[node name="Level3" type="Area2D" parent="."]
+editor/display_folded = true
+
+[node name="level3" type="Sprite" parent="Level3"]
+position = Vector2( 645, 205 )
+scale = Vector2( 0.232935, 0.239964 )
+texture = ExtResource( 5 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Level3"]
+polygon = PoolVector2Array( 567.205, 133.779, 738.539, 136.209, 756.766, 143.5, 757.982, 200.004, 757.982, 265.014, 735.502, 276.557, 571.458, 277.165, 538.649, 272.305, 528.928, 237.065, 532.573, 144.715, 556.876, 132.564 )
+
+[node name="Level4" type="Area2D" parent="."]
+editor/display_folded = true
+
+[node name="level4" type="Sprite" parent="Level4"]
+position = Vector2( 896, 205 )
+scale = Vector2( 0.277135, 0.285914 )
+texture = ExtResource( 6 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Level4"]
+polygon = PoolVector2Array( 866.729, 135.616, 996.149, 137.424, 1007.69, 147.753, 1011.34, 208.51, 1004.65, 261.368, 985.212, 277.165, 874.027, 276.557, 798.689, 272.304, 786.537, 263.191, 782.284, 215.193, 784.107, 162.334, 789.575, 139.854, 819.346, 136.209 )
+
+[node name="Level5" type="Area2D" parent="."]
+editor/display_folded = true
+
+[node name="level5" type="Sprite" parent="Level5"]
+position = Vector2( 135, 360 )
+scale = Vector2( 0.226569, 0.229324 )
+texture = ExtResource( 7 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Level5"]
+polygon = PoolVector2Array( 46.3581, 289.689, 225.565, 290.837, 241.647, 298.496, 247.774, 315.344, 247.774, 412.606, 233.989, 429.455, 49.4215, 429.072, 26.8292, 420.264, 21.4683, 373.165, 21.4683, 311.515, 31.4242, 294.284 )
+
+[node name="Level6" type="Area2D" parent="."]
+editor/display_folded = true
+
+[node name="level6" type="Sprite" parent="Level6"]
+position = Vector2( 390, 360 )
+scale = Vector2( 0.24816, 0.25 )
+texture = ExtResource( 8 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Level6"]
+polygon = PoolVector2Array( 309.128, 290.661, 483.256, 291.467, 500.991, 301.141, 502.2, 330.162, 502.2, 412.389, 487.286, 426.9, 325.654, 429.318, 291.796, 427.706, 276.882, 414.001, 278.494, 339.433, 277.285, 302.35, 289.78, 293.885 )
+
+[node name="Level7" type="Area2D" parent="."]
+editor/display_folded = true
+
+[node name="level7" type="Sprite" parent="Level7"]
+position = Vector2( 645, 360 )
+scale = Vector2( 0.26998, 0.269483 )
+texture = ExtResource( 9 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Level7"]
+polygon = PoolVector2Array( 558.636, 292.839, 740.422, 292.839, 753.321, 299.289, 757.351, 308.156, 758.158, 355.316, 758.158, 412.552, 744.453, 424.241, 613.454, 429.481, 552.59, 426.66, 534.855, 416.986, 530.018, 393.608, 531.63, 317.427, 536.064, 299.692 )
+
+[node name="Level8" type="Area2D" parent="."]
+editor/display_folded = true
+
+[node name="level8" type="Sprite" parent="Level8"]
+position = Vector2( 896, 360 )
+scale = Vector2( 0.258875, 0.265237 )
+texture = ExtResource( 10 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Level8"]
+polygon = PoolVector2Array( 794.137, 289.386, 994.94, 291.205, 1005.85, 298.481, 1012.4, 308.667, 1010.58, 409.796, 1001.12, 427.984, 887.99, 431.258, 812.325, 431.258, 785.77, 424.71, 780.313, 397.064, 778.494, 344.68, 780.677, 303.21 )
+
+[node name="GoBackButton" type="Area2D" parent="."]
+editor/display_folded = true
+
+[node name="Sprite" type="Sprite" parent="GoBackButton"]
+position = Vector2( 101.247, 544.585 )
+scale = Vector2( 0.391513, 0.455369 )
+texture = ExtResource( 11 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="GoBackButton"]
+polygon = PoolVector2Array( 104.898, 501.518, 184.396, 503.304, 193.775, 509.557, 193.775, 575.21, 185.736, 584.142, 16.4678, 584.589, 7.53548, 576.996, 6.64225, 511.343, 13.3415, 504.197, 62.0229, 502.411 )
+
+[node name="Animation" type="AnimationPlayer" parent="."]
+autoplay = "Start"
+anims/Blink = SubResource( 1 )
+anims/Start = SubResource( 2 )
+
+[node name="Music" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 12 )
+autoplay = true
+
+[node name="LevelSelection" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 13 )
+[connection signal="input_event" from="Level1" to="." method="_on_Level1_input_event"]
+[connection signal="mouse_entered" from="Level1" to="." method="_on_Level1_mouse_entered"]
+[connection signal="mouse_exited" from="Level1" to="." method="_on_Level1_mouse_exited"]
+[connection signal="input_event" from="Level2" to="." method="_on_Level2_input_event"]
+[connection signal="mouse_entered" from="Level2" to="." method="_on_Level2_mouse_entered"]
+[connection signal="mouse_exited" from="Level2" to="." method="_on_Level2_mouse_exited"]
+[connection signal="input_event" from="Level3" to="." method="_on_Level3_input_event"]
+[connection signal="mouse_entered" from="Level3" to="." method="_on_Level3_mouse_entered"]
+[connection signal="mouse_exited" from="Level3" to="." method="_on_Level3_mouse_exited"]
+[connection signal="input_event" from="Level4" to="." method="_on_Level4_input_event"]
+[connection signal="mouse_entered" from="Level4" to="." method="_on_Level4_mouse_entered"]
+[connection signal="mouse_exited" from="Level4" to="." method="_on_Level4_mouse_exited"]
+[connection signal="input_event" from="Level5" to="." method="_on_Level5_input_event"]
+[connection signal="mouse_entered" from="Level5" to="." method="_on_Level5_mouse_entered"]
+[connection signal="mouse_exited" from="Level5" to="." method="_on_Level5_mouse_exited"]
+[connection signal="input_event" from="Level6" to="." method="_on_Level6_input_event"]
+[connection signal="mouse_entered" from="Level6" to="." method="_on_Level6_mouse_entered"]
+[connection signal="mouse_exited" from="Level6" to="." method="_on_Level6_mouse_exited"]
+[connection signal="input_event" from="Level7" to="." method="_on_Level7_input_event"]
+[connection signal="mouse_entered" from="Level7" to="." method="_on_Level7_mouse_entered"]
+[connection signal="mouse_exited" from="Level7" to="." method="_on_Level7_mouse_exited"]
+[connection signal="input_event" from="Level8" to="." method="_on_Level8_input_event"]
+[connection signal="mouse_entered" from="Level8" to="." method="_on_Level8_mouse_entered"]
+[connection signal="mouse_exited" from="Level8" to="." method="_on_Level8_mouse_exited"]
+[connection signal="input_event" from="GoBackButton" to="." method="_on_GoBackButton_input_event"]
+[connection signal="mouse_entered" from="GoBackButton" to="." method="_on_GoBackButton_mouse_entered"]
+[connection signal="mouse_exited" from="GoBackButton" to="." method="_on_GoBackButton_mouse_exited"]
+[connection signal="animation_finished" from="Animation" to="." method="_on_Animation_animation_finished"]

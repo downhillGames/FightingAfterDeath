@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/healspell3.wav-5c5b5def40de3d33bd282e546a974a80.sample"
+
+[deps]
+
+source_file="res://Assets/Audio/healspell3.wav"
+dest_files=[ "res://.import/healspell3.wav-5c5b5def40de3d33bd282e546a974a80.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

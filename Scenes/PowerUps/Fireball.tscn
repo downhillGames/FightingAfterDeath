@@ -1,0 +1,134 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Scripts/Fireball.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Fire-Ball-Edit.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Audio/tir.wav" type="AudioStream" id=3]
+
+[sub_resource type="Animation" id=1]
+resource_name = "FireBlast"
+length = 2.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 0.9, 1, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 0, 1, 2, 3, 0, 1, 1, 3, 0, 1, 2, 3, 0, 1, 2, 3, 0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("CollisionShape2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.16011, 2.4016 ), Vector2( -0.320213, -3.68245 ), Vector2( 3.2555, 2.43718 ), Vector2( 3.82922, -3.65131 ), Vector2( -0.377389, 1.53626 ), Vector2( 0.993047, -4.56367 ), Vector2( 3.06795, 1.63258 ), Vector2( 4.26227, -3.61879 ), Vector2( -0.147145, 2.39067 ), Vector2( -0.313731, -4.16823 ), Vector2( 3.84256, -2.88192 ), Vector2( -0.208135, 1.8092 ), Vector2( 0.473208, -4.68935 ), Vector2( 3.95642, 2.76139 ), Vector2( 4.85504, -4.4948 ), Vector2( 0.0698924, 1.6179 ), Vector2( 0.728363, -3.9892 ), Vector2( 4.42886, 2.25159 ), Vector2( 3.48627, -4.7431 ), Vector2( -1.05873, 2.83191 ), Vector2( 0.640427, -4.64309 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Sprite:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.5, 1.8, 2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Sprite:rotation_degrees")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ -90.0 ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "FireBlast_left"
+length = 2.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 0.9, 1, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 0, 1, 2, 3, 0, 1, 1, 3, 0, 1, 2, 3, 0, 1, 2, 3, 0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("CollisionShape2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.2873, -2.05017 ), Vector2( -0.193024, 3.69475 ), Vector2( -4.1217, -2.01458 ), Vector2( -4.05676, 3.85308 ), Vector2( -0.758966, -2.53392 ), Vector2( -0.15169, 2.55915 ), Vector2( -3.67329, -2.31041 ), Vector2( -4.25967, 2.99526 ), Vector2( 0.616008, -2.44267 ), Vector2( -0.313731, 3.97213 ), Vector2( -3.91623, 5.13125 ), Vector2( -0.208135, -2.26098 ), Vector2( 0.218821, 3.19663 ), Vector2( -2.65763, -2.58073 ), Vector2( -5.82918, 4.40872 ), Vector2( 0.705856, -1.43474 ), Vector2( 0.728363, 3.64239 ), Vector2( -4.60186, -1.6914 ), Vector2( -4.14533, 1.99814 ), Vector2( 0.213196, -2.25582 ), Vector2( 0.640427, -4.64309 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Sprite:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.5, 1.8, 2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Sprite:rotation_degrees")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 90.0 ]
+}
+
+[sub_resource type="CircleShape2D" id=3]
+
+[node name="Fireball" type="KinematicBody2D"]
+scale = Vector2( 0.5, 0.5 )
+script = ExtResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+rotation = -1.5708
+texture = ExtResource( 2 )
+vframes = 2
+hframes = 2
+
+[node name="Animation" type="AnimationPlayer" parent="."]
+anims/FireBlast = SubResource( 1 )
+anims/FireBlast_left = SubResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0.16011, 2.4016 )
+shape = SubResource( 3 )
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 3 )
+autoplay = true
+[connection signal="animation_finished" from="Animation" to="." method="_on_AnimationPlayer_animation_finished"]

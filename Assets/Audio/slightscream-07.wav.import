@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/slightscream-07.wav-4c0827379fa37659f3c1ab23a950dba0.sample"
+
+[deps]
+
+source_file="res://Assets/Audio/slightscream-07.wav"
+dest_files=[ "res://.import/slightscream-07.wav-4c0827379fa37659f3c1ab23a950dba0.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

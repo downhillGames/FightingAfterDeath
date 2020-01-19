@@ -1,0 +1,829 @@
+[gd_scene load_steps=64 format=2]
+
+[ext_resource path="res://Scripts/connect.gd" type="Script" id=1]
+[ext_resource path="res://Scripts/Player.gd" type="Script" id=2]
+[ext_resource path="res://Assets/Knight/ready_2.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Knight/attack1_1.png" type="Texture" id=4]
+[ext_resource path="res://Assets/Knight/attack1_2.png" type="Texture" id=5]
+[ext_resource path="res://Assets/Knight/attack1_3.png" type="Texture" id=6]
+[ext_resource path="res://Assets/Knight/attack1_4.png" type="Texture" id=7]
+[ext_resource path="res://Assets/Knight/attack1_5.png" type="Texture" id=8]
+[ext_resource path="res://Assets/Knight/attack1_6.png" type="Texture" id=9]
+[ext_resource path="res://Assets/Knight/attack4_1.png" type="Texture" id=10]
+[ext_resource path="res://Assets/Knight/attack4_2.png" type="Texture" id=11]
+[ext_resource path="res://Assets/Knight/attack4_3.png" type="Texture" id=12]
+[ext_resource path="res://Assets/Knight/attack4_4.png" type="Texture" id=13]
+[ext_resource path="res://Assets/Knight/attack4_5.png" type="Texture" id=14]
+[ext_resource path="res://Assets/Knight/attack4_6.png" type="Texture" id=15]
+[ext_resource path="res://Assets/Knight/fall_back_1.png" type="Texture" id=16]
+[ext_resource path="res://Assets/Knight/fall_back_2.png" type="Texture" id=17]
+[ext_resource path="res://Assets/Knight/fall_back_3.png" type="Texture" id=18]
+[ext_resource path="res://Assets/Knight/fall_back_4.png" type="Texture" id=19]
+[ext_resource path="res://Assets/Knight/fall_back_5.png" type="Texture" id=20]
+[ext_resource path="res://Assets/Knight/stand_up_1.png" type="Texture" id=21]
+[ext_resource path="res://Assets/Knight/stand_up_2.png" type="Texture" id=22]
+[ext_resource path="res://Assets/Knight/stand_up_3.png" type="Texture" id=23]
+[ext_resource path="res://Assets/Knight/stand_up_4.png" type="Texture" id=24]
+[ext_resource path="res://Assets/Knight/stand_up_5.png" type="Texture" id=25]
+[ext_resource path="res://Assets/Knight/ready_1.png" type="Texture" id=26]
+[ext_resource path="res://Assets/Knight/ready_3.png" type="Texture" id=27]
+[ext_resource path="res://Assets/Knight/jump_1.png" type="Texture" id=28]
+[ext_resource path="res://Assets/Knight/jump_2.png" type="Texture" id=29]
+[ext_resource path="res://Assets/Knight/jump_3.png" type="Texture" id=30]
+[ext_resource path="res://Assets/Knight/jump_4.png" type="Texture" id=31]
+[ext_resource path="res://Assets/Knight/jump_5.png" type="Texture" id=32]
+[ext_resource path="res://Assets/Knight/run_1.png" type="Texture" id=33]
+[ext_resource path="res://Assets/Knight/run_2.png" type="Texture" id=34]
+[ext_resource path="res://Assets/Knight/run_3.png" type="Texture" id=35]
+[ext_resource path="res://Assets/Knight/run_4.png" type="Texture" id=36]
+[ext_resource path="res://Assets/Knight/run_5.png" type="Texture" id=37]
+[ext_resource path="res://Assets/Knight/run_6.png" type="Texture" id=38]
+[ext_resource path="res://Assets/Power_template2.png" type="Texture" id=39]
+[ext_resource path="res://Assets/Audio/1.wav" type="AudioStream" id=40]
+[ext_resource path="res://Assets/Audio/2.wav" type="AudioStream" id=41]
+[ext_resource path="res://Assets/Audio/3.wav" type="AudioStream" id=42]
+[ext_resource path="res://Assets/Audio/4.wav" type="AudioStream" id=43]
+[ext_resource path="res://Assets/Audio/5.wav" type="AudioStream" id=44]
+[ext_resource path="res://Assets/Audio/slightscream-06.wav" type="AudioStream" id=45]
+[ext_resource path="res://Assets/Audio/slightscream-07.wav" type="AudioStream" id=46]
+[ext_resource path="res://Assets/Audio/slightscream-08.wav" type="AudioStream" id=47]
+[ext_resource path="res://Assets/Audio/slightscream-09.wav" type="AudioStream" id=48]
+[ext_resource path="res://Assets/Audio/slightscream-10.wav" type="AudioStream" id=49]
+[ext_resource path="res://Assets/Audio/SecondChance.wav" type="AudioStream" id=50]
+[ext_resource path="res://Assets/Audio/Health.wav" type="AudioStream" id=51]
+[ext_resource path="res://Assets/Audio/Fireball.wav" type="AudioStream" id=52]
+[ext_resource path="res://Assets/Audio/DoubleDamage.wav" type="AudioStream" id=53]
+[ext_resource path="res://Assets/Audio/LightningStrike.wav" type="AudioStream" id=54]
+
+[sub_resource type="Animation" id=1]
+resource_name = "Attack_1"
+length = 0.51
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite:offset")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 10, -10 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("CollisionPolygon2D:polygon")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ PoolVector2Array( 0.542171, 10.2359, -4.87151, 18.0952, -8.37565, 17.4463, -8.58148, 14.9832, -5.57069, 9.63914, -6.31868, 7.67567, -8.56265, 6.41344, -7.44066, 5.24471, -9.54438, 2.393, -9.21714, 0.38278, -8.84314, -1.2067, -7.53416, -5.74138, -4.12147, -6.39587, -3.52253, -8.64529, -2.6767, -10.6995, 0.0420568, -11.062, 1.61289, -9.43071, 2.21706, -6.28904, 1.65481, -7.12128, 3.48581, -2.05987, 5.03618, 0.689816, 5.03618, 1.69397, 6.64284, 2.02869, 8.43998, 2.77347, 7.71394, 4.70645, 6.77672, 3.97007, 5.29698, 3.85071, 7.69613, 5.54103, 8.2414, 8.21281, 8.89571, 10.3393, 7.25993, 13.0656, 7.04182, 15.1376, 8.07782, 15.1376, 7.64161, 16.937, 5.56961, 16.6644, 4.16591, 16.6225, 4.50063, 14.4803, 3.29564, 12.7397, 1.62204, 9.52641, 1.35811, 9.93921 ), PoolVector2Array( 9.09573, 7.03557, 20.2765, 1.58049, 22.2587, -5.97664, 16.436, -12.4188, 2.9323, -18.8609, -27.544, -16.1354, -25.4379, -18.1176, -4.25315, -20.8431, 11.2327, -21.7103, 28.2053, -15.516, 30.3114, -10.3127, 32.6652, -8.57827, 32.0458, -0.401708, 23.9643, 8.30397, 13.2533, 12.8843 ), PoolVector2Array( 0.542171, 10.2359, -4.87151, 18.0952, -8.37565, 17.4463, -8.58148, 14.9832, -5.57069, 9.63914, -6.31868, 7.67567, -8.56265, 6.41344, -7.44066, 5.24471, -5.24425, 1.20883, -2.51873, -3.375, 2.21706, -6.28904, 4.04729, -5.23331, 7.39225, -9.94103, 10.8611, -8.57827, 10.8611, -5.10943, 11.2327, -2.87945, 12.3477, -1.64058, 11.6044, -0.277822, 9.74611, 1.58049, 8.01169, 6.53598, 7.25993, 13.0656, 7.04182, 15.1376, 8.07782, 15.1376, 7.64161, 16.937, 5.56961, 16.6644, 4.16591, 16.6225, 4.50063, 14.4803, 3.29564, 12.7397, 1.62204, 9.52641, 1.35811, 9.93921 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath(".:exposed")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ true, false, true ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath(".:attacking")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, false ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Shield:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "Attack_1_left"
+length = 0.51
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 3.24901, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite:offset")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -10, -10 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("CollisionPolygon2D:polygon")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ PoolVector2Array( 0.542171, 10.2359, -4.87151, 18.0952, -8.37565, 17.4463, -8.58148, 14.9832, -5.57069, 9.63914, -6.31868, 7.67567, -8.56265, 6.41344, -7.44066, 5.24471, -9.92595, -0.781137, -8.69051, -5.31108, -5.25873, -6.40925, -4.57237, -9.70376, -3.19966, -11.4883, -0.316971, -11.9001, 2.84027, -3.93837, 6.40931, -0.506593, 9.42928, 2.65064, 5.9975, 5.12152, 3.25208, 7.45513, 7.04182, 15.1376, 8.07782, 15.1376, 7.64161, 16.937, 5.56961, 16.6644, 4.16591, 16.6225, 2.84027, 16.2405, 2.01664, 14.456, 1.62204, 9.52641, 1.35811, 9.93921 ), PoolVector2Array( 8.88019, 7.72967, 13.5474, 6.35696, 18.901, 1.68975, 21.9209, -3.8011, 19.5873, -10.1156, 6.54658, -15.881, -11.2987, -17.5282, -29.4184, -15.6064, -3.06239, -20.5482, 7.23294, -20.1364, 23.4309, -15.6064, 29.3336, -9.42922, 31.1181, -3.25202, 28.0981, 3.74881, 16.1556, 11.8478, 3.29564, 12.7397, -0.47748, 8.51222 ), PoolVector2Array( 0.542171, 10.2359, -4.87151, 18.0952, -8.37565, 17.4463, -8.58148, 14.9832, -5.57069, 9.63914, -6.31868, 7.67567, -8.56265, 6.41344, -7.44066, 5.24471, -5.25873, 0.179762, -5.396, -0.0947815, -4.16056, -2.15385, -1.82695, -3.8011, 2.84027, -3.93837, 4.48751, -5.03654, 6.40931, -9.0174, 9.70382, -9.15467, 11.0765, -7.50742, 10.802, -3.11474, 11.4883, -0.643865, 9.42928, 2.65064, 5.9975, 5.12152, 8.88019, 7.72967, 7.04182, 15.1376, 8.07782, 15.1376, 7.64161, 16.937, 5.56961, 16.6644, 4.16591, 16.6225, 4.50063, 14.4803, 3.29564, 12.7397, 1.62204, 9.52641, 1.35811, 9.93921 ), PoolVector2Array( 0.542171, 10.2359, -4.87151, 18.0952, -8.37565, 17.4463, -8.58148, 14.9832, -5.57069, 9.63914, -6.31868, 7.67567, -8.56265, 6.41344, -7.44066, 5.24471, -5.25873, 0.179762, -5.396, -0.0947815, -4.16056, -2.15385, -1.82695, -3.8011, 0.369385, -5.03654, 0.643929, -7.09561, 2.42846, -11.4883, 5.31115, -11.7628, 6.40931, -9.0174, 9.70382, -9.15467, 11.0765, -7.50742, 10.802, -3.11474, 11.4883, -0.643865, 9.42928, 2.65064, 9.292, 4.43516, 8.88019, 7.72967, 7.04182, 15.1376, 8.07782, 15.1376, 7.64161, 16.937, 5.56961, 16.6644, 4.16591, 16.6225, 4.50063, 14.4803, 3.29564, 12.7397, 1.62204, 9.52641, 1.35811, 9.93921 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath(".:exposed")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ true, false, true ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("CollisionPolygon2D:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath(".:attacking")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, false ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Shield:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "Attack_2"
+length = 0.51
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 24.2515, 1 ),
+"update": 1,
+"values": [ ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("CollisionPolygon2D:polygon")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ PoolVector2Array( -0.771984, 14.0286, -4.87151, 18.0952, -8.37565, 17.4463, -8.58148, 14.9832, -5.57069, 9.63914, -2.08751, 7.9833, -2.99376, 5.92913, -5.04678, 4.00678, -9.01116, 0.290165, -6.67917, -6.21462, -3.53751, -8.20837, -3.13613, -11.0595, -1.22772, -12.5862, 1.335, -12.2045, 1.49858, -5.22521, 0.95332, -0.75408, 9.67749, 1.75412, 9.40485, 3.71705, 1.98932, 1.75412, 4.98825, 7.86103, 7.87812, 16.5307, 7.09417, 16.7672, 5.86066, 17.0214, 2.7332, 13.7099, 0.396412, 13.9223, -0.240894, 14.3472 ), PoolVector2Array( -21.3062, 11.368, 9.4704, 9.65263, 24.3037, 4.10275, 29.0463, -3.46526, 27.7345, -7.09791, 19.4602, -10.5287, -0.519379, -9.31786, 8.76405, -12.6478, 22.891, -13.7578, 30.9636, -12.7487, 38.4307, -8.61151, 39.4397, -1.64894, 33.4862, 6.42361, 28.34, 9.45081, 14.3139, 12.9826, 8.15861, 13.9916, 2.7332, 13.7099, 0.396408, 13.9223 ), PoolVector2Array( -1.10166, -5.10258, 5.57417, -11.0366, 10.2472, -12.1493, 11.6566, -2.5806, 6.16757, 1.35072, 7.72527, 4.7628, 9.4704, 9.65263, 8.39285, 16.9276, 5.27746, 16.5568, 5.49999, 11.7353, 2.90384, 12.6996, 0.233509, 13.8123, -3.77199, 15.2216, -4.73627, 17.0018, -8.44506, 15.1474, -0.137371, 6.69138, 1.12362, 1.20237, -5.99726, 4.4661, -5.62638, -0.355325 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath(".:exposed")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ true, false, true ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath(".:attacking")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, false ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Sprite:offset")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 10, -10 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Shield:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "Attack_2_left"
+length = 0.51
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 24.2515, 1 ),
+"update": 1,
+"values": [ ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("CollisionPolygon2D:polygon")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ PoolVector2Array( -0.771984, 14.0286, -4.87151, 18.0952, -8.37565, 17.4463, -8.58148, 14.9832, -5.57069, 9.63914, -2.08751, 7.9833, -2.99376, 5.92913, -5.04678, 4.00678, -9.01116, 0.290165, -6.67917, -6.21462, -3.53751, -8.20837, -3.13613, -11.0595, -1.22772, -12.5862, 1.335, -12.2045, 1.49858, -5.22521, 0.95332, -0.75408, 9.67749, 1.75412, 9.40485, 3.71705, 1.98932, 1.75412, 4.98825, 7.86103, 7.87812, 16.5307, 7.09417, 16.7672, 5.86066, 17.0214, 2.7332, 13.7099, 0.396412, 13.9223, -0.240894, 14.3472 ), PoolVector2Array( -21.3062, 11.368, 9.4704, 9.65263, 24.3037, 4.10275, 29.0463, -3.46526, 27.7345, -7.09791, 19.4602, -10.5287, -0.519379, -9.31786, 8.76405, -12.6478, 22.891, -13.7578, 30.9636, -12.7487, 38.4307, -8.61151, 39.4397, -1.64894, 33.4862, 6.42361, 28.34, 9.45081, 14.3139, 12.9826, 8.15861, 13.9916, 2.7332, 13.7099, 0.396408, 13.9223 ), PoolVector2Array( -1.10166, -5.10258, 5.57417, -11.0366, 10.2472, -12.1493, 11.6566, -2.5806, 6.16757, 1.35072, 7.72527, 4.7628, 9.4704, 9.65263, 8.39285, 16.9276, 5.27746, 16.5568, 5.49999, 11.7353, 2.90384, 12.6996, 0.233509, 13.8123, -3.77199, 15.2216, -4.73627, 17.0018, -8.44506, 15.1474, -0.137371, 6.69138, 1.12362, 1.20237, -5.99726, 4.4661, -5.62638, -0.355325 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath(".:exposed")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ true, false, true ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath(".:attacking")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, false ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Sprite:offset")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -10, -10 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Shield:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=5]
+resource_name = "Die"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8, 2, 2.2, 2.4, 2.6, 2.8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1.46409, 1 ),
+"update": 1,
+"values": [ ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.8, 1.8 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 0.505882, 0.533333, 0.537255, 0.517647 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Sprite:offset")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 10, -10 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Shield:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=6]
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 26 ), ExtResource( 3 ), ExtResource( 27 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite:offset")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("CollisionPolygon2D:polygon")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ PoolVector2Array( 0.542171, 10.2359, -4.87151, 18.0952, -8.37565, 17.4463, -8.58148, 14.9832, -5.57069, 9.63914, -6.31868, 7.67567, -8.56265, 6.41344, -7.44066, 5.24471, -9.54438, 2.393, -9.21714, 0.38278, -8.84314, -1.2067, -7.53416, -5.74138, -4.12147, -6.39587, -3.52253, -8.64529, -2.6767, -10.6995, 0.0420568, -11.062, 1.61289, -9.43071, 2.21706, -6.28904, 1.65481, -7.12128, 3.48581, -2.05987, 5.03618, 0.689816, 5.03618, 1.69397, 6.64284, 2.02869, 8.43998, 2.77347, 7.71394, 4.70645, 6.77672, 3.97007, 5.29698, 3.85071, 7.69613, 5.54103, 8.2414, 8.21281, 8.89571, 10.3393, 7.25993, 13.0656, 7.04182, 15.1376, 8.07782, 15.1376, 7.64161, 16.937, 5.56961, 16.6644, 4.16591, 16.6225, 4.50063, 14.4803, 3.29564, 12.7397, 1.62204, 9.52641, 1.35811, 9.93921 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("CollisionPolygon2D:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath(".:exposed")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath(".:attacking")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Shield:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=7]
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:offset")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite:texture")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 0.4, 0.6, 0.8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 28 ), ExtResource( 29 ), ExtResource( 30 ), ExtResource( 31 ), ExtResource( 32 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath(".:exposed")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath(".:attacking")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Shield:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=8]
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.3, 0.5, 0.7, 0.9 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 33 ), ExtResource( 34 ), ExtResource( 35 ), ExtResource( 36 ), ExtResource( 37 ), ExtResource( 38 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite:offset")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath(".:exposed")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath(".:attacking")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Shield:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=9]
+resource_name = "Shield"
+length = 0.31
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 26 ), ExtResource( 3 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite:offset")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("CollisionPolygon2D:polygon")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ PoolVector2Array( 0.419228, 18.3219, -7.5425, 18.1846, -19.7596, 13.1056, -21.8187, 2.53571, -19.4851, -5.0142, -12.2097, -13.2505, -7.81704, -16.8195, -2.32619, -17.3686, 5.22371, -17.0941, 9.61639, -15.7213, 14.4209, -13.525, 18.8135, -7.21054, 21.1472, -3.22968, 22.6571, 3.08479, 21.1472, 11.4583, 13.3227, 16.4001, 8.65549, 17.7728 ), PoolVector2Array( 0.542171, 10.2359, -4.87151, 18.0952, -8.37565, 17.4463, -8.58148, 14.9832, -5.57069, 9.63914, -6.31868, 7.67567, -8.56265, 6.41344, -7.44066, 5.24471, -9.54438, 2.393, -9.21714, 0.38278, -8.84314, -1.2067, -7.53416, -5.74138, -4.12147, -6.39587, -3.52253, -8.64529, -2.6767, -10.6995, 0.0420568, -11.062, 1.61289, -9.43071, 2.21706, -6.28904, 1.65481, -7.12128, 3.48581, -2.05987, 5.03618, 0.689816, 5.03618, 1.69397, 6.64284, 2.02869, 8.43998, 2.77347, 7.71394, 4.70645, 6.77672, 3.97007, 5.29698, 3.85071, 7.69613, 5.54103, 8.2414, 8.21281, 8.89571, 10.3393, 7.25993, 13.0656, 7.04182, 15.1376, 8.07782, 15.1376, 7.64161, 16.937, 5.56961, 16.6644, 4.16591, 16.6225, 4.50063, 14.4803, 3.29564, 12.7397, 1.62204, 9.52641, 1.35811, 9.93921 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("CollisionPolygon2D:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath(".:exposed")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath(".:attacking")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Shield:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath(".:shield_recharge")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 200, 200 ]
+}
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_horizontal_guides_": [ -50.8496 ]
+}
+
+[node name="Player" type="KinematicBody2D" parent="."]
+script = ExtResource( 2 )
+character_number = 2
+
+[node name="Sprite" type="Sprite" parent="Player"]
+texture = ExtResource( 3 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Player"]
+polygon = PoolVector2Array( 0.542171, 10.2359, -4.87151, 18.0952, -8.37565, 17.4463, -8.58148, 14.9832, -5.57069, 9.63914, -6.31868, 7.67567, -8.56265, 6.41344, -7.44066, 5.24471, -9.54438, 2.393, -9.21714, 0.38278, -8.84314, -1.2067, -7.53416, -5.74138, -4.12147, -6.39587, -3.52253, -8.64529, -2.6767, -10.6995, 0.0420568, -11.062, 1.61289, -9.43071, 2.21706, -6.28904, 1.65481, -7.12128, 3.48581, -2.05987, 5.03618, 0.689816, 5.03618, 1.69397, 6.64284, 2.02869, 8.43998, 2.77347, 7.71394, 4.70645, 6.77672, 3.97007, 5.29698, 3.85071, 7.69613, 5.54103, 8.2414, 8.21281, 8.89571, 10.3393, 7.25993, 13.0656, 7.04182, 15.1376, 8.07782, 15.1376, 7.64161, 16.937, 5.56961, 16.6644, 4.16591, 16.6225, 4.50063, 14.4803, 3.29564, 12.7397, 1.62204, 9.52641, 1.35811, 9.93921 )
+
+[node name="Animation" type="AnimationPlayer" parent="Player"]
+anims/Attack_1 = SubResource( 1 )
+anims/Attack_1_left = SubResource( 2 )
+anims/Attack_2 = SubResource( 3 )
+anims/Attack_2_left = SubResource( 4 )
+anims/Die = SubResource( 5 )
+anims/Idle = SubResource( 6 )
+anims/Jump = SubResource( 7 )
+anims/Run = SubResource( 8 )
+anims/Shield = SubResource( 9 )
+
+[node name="Shield" type="Sprite" parent="Player"]
+visible = false
+position = Vector2( 0, 3.91223 )
+scale = Vector2( 1.36677, 1.35862 )
+texture = ExtResource( 39 )
+
+[node name="Sounds" type="Node2D" parent="Player"]
+position = Vector2( 0.354797, -0.177406 )
+
+[node name="Hit1" type="AudioStreamPlayer2D" parent="Player/Sounds"]
+stream = ExtResource( 40 )
+
+[node name="Hit2" type="AudioStreamPlayer2D" parent="Player/Sounds"]
+stream = ExtResource( 41 )
+
+[node name="Hit3" type="AudioStreamPlayer2D" parent="Player/Sounds"]
+stream = ExtResource( 42 )
+
+[node name="Hit4" type="AudioStreamPlayer2D" parent="Player/Sounds"]
+stream = ExtResource( 43 )
+attenuation = 0.233258
+
+[node name="Hit5" type="AudioStreamPlayer2D" parent="Player/Sounds"]
+stream = ExtResource( 44 )
+attenuation = 0.233258
+
+[node name="Hurt1" type="AudioStreamPlayer2D" parent="Player/Sounds"]
+stream = ExtResource( 45 )
+attenuation = 0.233258
+
+[node name="Hurt2" type="AudioStreamPlayer2D" parent="Player/Sounds"]
+stream = ExtResource( 46 )
+attenuation = 0.233258
+
+[node name="Hurt3" type="AudioStreamPlayer2D" parent="Player/Sounds"]
+stream = ExtResource( 47 )
+attenuation = 0.233258
+
+[node name="Hurt4" type="AudioStreamPlayer2D" parent="Player/Sounds"]
+stream = ExtResource( 48 )
+attenuation = 0.233258
+
+[node name="Hurt5" type="AudioStreamPlayer2D" parent="Player/Sounds"]
+stream = ExtResource( 49 )
+attenuation = 0.233258
+
+[node name="PowerUpSounds" type="Node2D" parent="Player/Sounds"]
+
+[node name="SecondChance" type="AudioStreamPlayer2D" parent="Player/Sounds/PowerUpSounds"]
+stream = ExtResource( 50 )
+
+[node name="Invincible" type="AudioStreamPlayer2D" parent="Player/Sounds/PowerUpSounds"]
+stream = ExtResource( 51 )
+
+[node name="Health" type="AudioStreamPlayer2D" parent="Player/Sounds/PowerUpSounds"]
+
+[node name="Fireball" type="AudioStreamPlayer2D" parent="Player/Sounds/PowerUpSounds"]
+stream = ExtResource( 52 )
+
+[node name="DoubleDamage" type="AudioStreamPlayer2D" parent="Player/Sounds/PowerUpSounds"]
+stream = ExtResource( 53 )
+
+[node name="LightningStrike" type="AudioStreamPlayer2D" parent="Player/Sounds/PowerUpSounds"]
+stream = ExtResource( 54 )
+[connection signal="animation_finished" from="Player/Animation" to="Player" method="_on_Animation_animation_finished"]

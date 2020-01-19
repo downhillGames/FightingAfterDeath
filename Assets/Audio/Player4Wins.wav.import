@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Player4Wins.wav-97f39c13c0a17a23e3b33ae02b7e5622.sample"
+
+[deps]
+
+source_file="res://Assets/Audio/Player4Wins.wav"
+dest_files=[ "res://.import/Player4Wins.wav-97f39c13c0a17a23e3b33ae02b7e5622.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

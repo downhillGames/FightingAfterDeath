@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Crack the Underground Base (Long - OGG).ogg-83cb7c9b65856868679913248640c9f1.oggstr"
+
+[deps]
+
+source_file="res://Assets/Audio/Crack the Underground Base (Long - OGG).ogg"
+dest_files=[ "res://.import/Crack the Underground Base (Long - OGG).ogg-83cb7c9b65856868679913248640c9f1.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

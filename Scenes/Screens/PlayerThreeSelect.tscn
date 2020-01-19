@@ -1,0 +1,449 @@
+[gd_scene load_steps=48 format=2]
+
+[ext_resource path="res://Scripts/PlayerThreeSelect.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Screens/Player3.PNG" type="Texture" id=2]
+[ext_resource path="res://Assets/Button/Button_with_outline.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Imp/attack1_1.png" type="Texture" id=4]
+[ext_resource path="res://Assets/Knight/attack1_1.png" type="Texture" id=5]
+[ext_resource path="res://Assets/Reaper/Attack1_1.png" type="Texture" id=6]
+[ext_resource path="res://Assets/NightStalker/Attack1_1.png" type="Texture" id=7]
+[ext_resource path="res://Assets/DarkMoon/Attack1_1.png" type="Texture" id=8]
+[ext_resource path="res://Assets/MasterKiller/Attack1_1.png" type="Texture" id=9]
+[ext_resource path="res://Assets/WinterFury/Attack1_1.png" type="Texture" id=10]
+[ext_resource path="res://Assets/SoulMelter/Attack1_1.png" type="Texture" id=11]
+[ext_resource path="res://Assets/Fighting Spirit 2.ttf" type="DynamicFontData" id=12]
+[ext_resource path="res://Assets/Imp/attack1_2.png" type="Texture" id=13]
+[ext_resource path="res://Assets/Imp/attack1_3.png" type="Texture" id=14]
+[ext_resource path="res://Assets/Imp/attack1_4.png" type="Texture" id=15]
+[ext_resource path="res://Assets/Imp/attack1_5.png" type="Texture" id=16]
+[ext_resource path="res://Assets/Imp/attack1_6.png" type="Texture" id=17]
+[ext_resource path="res://Assets/Knight/attack1_2.png" type="Texture" id=18]
+[ext_resource path="res://Assets/Knight/attack1_3.png" type="Texture" id=19]
+[ext_resource path="res://Assets/Knight/attack1_4.png" type="Texture" id=20]
+[ext_resource path="res://Assets/Knight/attack1_5.png" type="Texture" id=21]
+[ext_resource path="res://Assets/Knight/attack1_6.png" type="Texture" id=22]
+[ext_resource path="res://Assets/Reaper/Attack1_2.png" type="Texture" id=23]
+[ext_resource path="res://Assets/Reaper/Attack1_3.png" type="Texture" id=24]
+[ext_resource path="res://Assets/Reaper/Attack1_4.png" type="Texture" id=25]
+[ext_resource path="res://Assets/NightStalker/Attack1_2.png" type="Texture" id=26]
+[ext_resource path="res://Assets/NightStalker/Attack1_3.png" type="Texture" id=27]
+[ext_resource path="res://Assets/NightStalker/Attack1_4.png" type="Texture" id=28]
+[ext_resource path="res://Assets/DarkMoon/Attack1_2.png" type="Texture" id=29]
+[ext_resource path="res://Assets/DarkMoon/Attack1_3.png" type="Texture" id=30]
+[ext_resource path="res://Assets/DarkMoon/Attack1_4.png" type="Texture" id=31]
+[ext_resource path="res://Assets/MasterKiller/Attack1_2.png" type="Texture" id=32]
+[ext_resource path="res://Assets/MasterKiller/Attack1_3.png" type="Texture" id=33]
+[ext_resource path="res://Assets/MasterKiller/Attack1_4.png" type="Texture" id=34]
+[ext_resource path="res://Assets/WinterFury/Attack1_2.png" type="Texture" id=35]
+[ext_resource path="res://Assets/WinterFury/Attack1_3.png" type="Texture" id=36]
+[ext_resource path="res://Assets/WinterFury/Attack1_4.png" type="Texture" id=37]
+[ext_resource path="res://Assets/SoulMelter/Attack1_2.png" type="Texture" id=38]
+[ext_resource path="res://Assets/SoulMelter/Attack1_3.png" type="Texture" id=39]
+[ext_resource path="res://Assets/SoulMelter/Attack1_4.png" type="Texture" id=40]
+[ext_resource path="res://Assets/Button/GoBackButton.png" type="Texture" id=41]
+[ext_resource path="res://Assets/Audio/Crack the Underground Base (Long - OGG).ogg" type="AudioStream" id=42]
+[ext_resource path="res://Assets/Audio/Player3Selection.wav" type="AudioStream" id=43]
+
+[sub_resource type="DynamicFont" id=1]
+size = 50
+font_data = ExtResource( 12 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 50
+font_data = ExtResource( 12 )
+
+[sub_resource type="Animation" id=3]
+resource_name = "Blink"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("GoBackButton/Sprite:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Fighter1/Imp:texture")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 4 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 4 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Fighter2/Knight:texture")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 5 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 5 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Fighter3/Reaper:texture")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 6 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 6 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 6 ), ExtResource( 23 ), ExtResource( 24 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Fighter4/Night Stalker:texture")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 7 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 7 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 7 ), ExtResource( 26 ), ExtResource( 27 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Fighter5/DarkMoon:texture")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 8 ), ExtResource( 29 ), ExtResource( 30 ), ExtResource( 31 ), ExtResource( 8 ), ExtResource( 29 ), ExtResource( 30 ), ExtResource( 31 ), ExtResource( 8 ), ExtResource( 29 ), ExtResource( 30 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Fighter6/Master Killer:texture")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 9 ), ExtResource( 32 ), ExtResource( 33 ), ExtResource( 34 ), ExtResource( 9 ), ExtResource( 32 ), ExtResource( 33 ), ExtResource( 34 ), ExtResource( 9 ), ExtResource( 32 ), ExtResource( 33 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Fighter7/Winter Fury:texture")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 10 ), ExtResource( 35 ), ExtResource( 36 ), ExtResource( 37 ), ExtResource( 10 ), ExtResource( 35 ), ExtResource( 36 ), ExtResource( 37 ), ExtResource( 10 ), ExtResource( 35 ), ExtResource( 36 ) ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("Fighter8/SoulMelter:texture")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 11 ), ExtResource( 38 ), ExtResource( 39 ), ExtResource( 40 ), ExtResource( 11 ), ExtResource( 38 ), ExtResource( 39 ), ExtResource( 40 ), ExtResource( 11 ), ExtResource( 38 ), ExtResource( 39 ) ]
+}
+
+[sub_resource type="Animation" id=4]
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+
+[node name="Player1Select" type="Sprite" parent="Sprite"]
+position = Vector2( 558.473, 313.661 )
+scale = Vector2( 1.16433, 1.17812 )
+texture = ExtResource( 2 )
+
+[node name="Fighter1" type="Area2D" parent="."]
+
+[node name="Button" type="Sprite" parent="Fighter1"]
+position = Vector2( 268, 300 )
+scale = Vector2( 0.397132, 0.434001 )
+texture = ExtResource( 3 )
+
+[node name="Imp" type="Sprite" parent="Fighter1"]
+position = Vector2( 293.868, 262.118 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 4 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Fighter1"]
+scale = Vector2( 1.002, 1 )
+polygon = PoolVector2Array( 224.641, 238.261, 313.14, 238.664, 323.599, 244.71, 327.622, 253.578, 328.828, 342.254, 318.772, 358.377, 295.44, 359.989, 228.664, 359.586, 216.193, 356.765, 207.344, 342.657, 207.746, 303.156, 208.148, 262.849, 209.355, 249.95, 217.4, 239.47 )
+
+[node name="Fighter2" type="Area2D" parent="."]
+
+[node name="Button" type="Sprite" parent="Fighter2"]
+position = Vector2( 430, 300 )
+scale = Vector2( 0.397132, 0.434001 )
+texture = ExtResource( 3 )
+
+[node name="Knight" type="Sprite" parent="Fighter2"]
+position = Vector2( 454.151, 263.024 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 5 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Fighter2"]
+polygon = PoolVector2Array( 385.896, 239.285, 474.725, 239.285, 487.337, 248.058, 489.53, 324.824, 485.692, 346.757, 471.435, 357.176, 411.119, 357.176, 384.251, 354.434, 373.284, 342.371, 372.736, 310.019, 373.833, 275.474, 373.833, 254.638 )
+
+[node name="Fighter3" type="Area2D" parent="."]
+
+[node name="Button" type="Sprite" parent="Fighter3"]
+position = Vector2( 606, 300 )
+scale = Vector2( 0.397132, 0.434001 )
+texture = ExtResource( 3 )
+
+[node name="Reaper" type="Sprite" parent="Fighter3"]
+position = Vector2( 602.483, 288.911 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 6 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Fighter3"]
+polygon = PoolVector2Array( 560.862, 241.769, 651.079, 241.322, 662.691, 246.681, 667.158, 282.857, 664.478, 331.092, 664.031, 349.404, 648.846, 356.103, 585.873, 357.889, 555.95, 352.083, 548.804, 324.84, 548.357, 289.11, 549.697, 251.594 )
+
+[node name="Fighter4" type="Area2D" parent="."]
+editor/display_folded = true
+
+[node name="Button" type="Sprite" parent="Fighter4"]
+position = Vector2( 780, 300 )
+scale = Vector2( 0.397132, 0.434001 )
+texture = ExtResource( 3 )
+
+[node name="Night Stalker" type="Sprite" parent="Fighter4"]
+position = Vector2( 785.525, 288.167 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 7 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Fighter4"]
+polygon = PoolVector2Array( 773.361, 240.835, 828.65, 242.657, 837.763, 254.809, 838.979, 331.97, 833.51, 354.45, 772.146, 356.272, 735.692, 356.272, 723.541, 339.868, 722.933, 269.998, 726.579, 248.733, 735.692, 242.05 )
+
+[node name="Fighter5" type="Area2D" parent="."]
+editor/display_folded = true
+
+[node name="Button" type="Sprite" parent="Fighter5"]
+position = Vector2( 268, 450 )
+scale = Vector2( 0.397132, 0.434001 )
+texture = ExtResource( 3 )
+
+[node name="DarkMoon" type="Sprite" parent="Fighter5"]
+position = Vector2( 264.89, 435.747 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 8 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Fighter5"]
+polygon = PoolVector2Array( 265.959, 392.453, 317.008, 392.453, 325.864, 399.745, 327.426, 437.772, 326.385, 490.905, 319.613, 503.407, 284.712, 506.012, 232.099, 506.012, 220.639, 502.886, 212.305, 493.51, 211.263, 450.795, 209.7, 415.894, 212.305, 399.225, 223.244, 390.89 )
+
+[node name="Fighter6" type="Area2D" parent="."]
+
+[node name="Button" type="Sprite" parent="Fighter6"]
+position = Vector2( 430, 450 )
+scale = Vector2( 0.397132, 0.434001 )
+texture = ExtResource( 3 )
+
+[node name="Master Killer" type="Sprite" parent="Fighter6"]
+position = Vector2( 333.019, 427.245 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 9 )
+offset = Vector2( 50, 0 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Fighter6"]
+polygon = PoolVector2Array( 388.647, 388.339, 476.335, 387.956, 486.291, 393.7, 491.652, 407.102, 491.652, 483.303, 484.969, 508.137, 435.794, 510.555, 390.65, 509.346, 375.736, 504.106, 370.093, 487.58, 369.287, 413.818, 372.915, 396.083, 385.007, 388.827 )
+
+[node name="Fighter7" type="Area2D" parent="."]
+
+[node name="Button" type="Sprite" parent="Fighter7"]
+position = Vector2( 606, 450 )
+scale = Vector2( 0.397132, 0.434001 )
+texture = ExtResource( 3 )
+
+[node name="Winter Fury" type="Sprite" parent="Fighter7"]
+position = Vector2( 508.426, 431.344 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 10 )
+offset = Vector2( 50, 0 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Fighter7"]
+polygon = PoolVector2Array( 588.768, 388.475, 652.235, 389.415, 664.928, 397.407, 667.749, 488.141, 660.697, 504.595, 645.653, 509.767, 569.963, 509.767, 558.21, 506.946, 547.867, 498.484, 546.927, 401.638, 555.389, 390.825 )
+
+[node name="Fighter8" type="Area2D" parent="."]
+
+[node name="Button" type="Sprite" parent="Fighter8"]
+position = Vector2( 780, 450 )
+scale = Vector2( 0.397132, 0.434001 )
+texture = ExtResource( 3 )
+
+[node name="SoulMelter" type="Sprite" parent="Fighter8"]
+position = Vector2( 796.541, 404.278 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 11 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Fighter8"]
+polygon = PoolVector2Array( 760.56, 387.395, 826.848, 388.335, 839.071, 396.797, 842.362, 413.251, 840.952, 493.173, 830.609, 507.746, 797.23, 509.627, 764.321, 509.627, 735.174, 508.217, 722.01, 500.695, 721.07, 445.69, 722.48, 401.968, 731.413, 391.156, 745.046, 387.395 )
+
+[node name="Control" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="Imp" type="Label" parent="Control"]
+margin_left = 252.084
+margin_top = 314.865
+margin_right = 329.084
+margin_bottom = 383.865
+rect_scale = Vector2( 0.5, 0.5 )
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.964706, 0.105882, 0.105882, 1 )
+text = "Imp"
+
+[node name="Knight" type="Label" parent="Control"]
+margin_left = 392.343
+margin_top = 316.976
+margin_right = 557.343
+margin_bottom = 385.976
+rect_scale = Vector2( 0.5, 0.5 )
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.964706, 0.105882, 0.105882, 1 )
+text = "Knight"
+
+[node name="Reaper" type="Label" parent="Control"]
+margin_left = 565.959
+margin_top = 315.559
+margin_right = 730.959
+margin_bottom = 384.559
+rect_scale = Vector2( 0.5, 0.5 )
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.964706, 0.105882, 0.105882, 1 )
+text = "Reaper"
+
+[node name="Night Stalker" type="Label" parent="Control"]
+margin_left = 729.32
+margin_top = 322.2
+margin_right = 1080.32
+margin_bottom = 391.2
+rect_scale = Vector2( 0.3, 0.3 )
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0.964706, 0.105882, 0.105882, 1 )
+text = "Night Stalker"
+
+[node name="Dark Moon" type="Label" parent="Control"]
+margin_left = 233.0
+margin_top = 474.0
+margin_right = 502.0
+margin_bottom = 543.0
+rect_scale = Vector2( 0.3, 0.3 )
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0.964706, 0.105882, 0.105882, 1 )
+text = "Dark Moon"
+
+[node name="Master Killer" type="Label" parent="Control"]
+margin_left = 385.224
+margin_top = 468.988
+margin_right = 750.224
+margin_bottom = 537.988
+rect_scale = Vector2( 0.3, 0.3 )
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0.964706, 0.105882, 0.105882, 1 )
+text = "Master Killer"
+
+[node name="Winter Fury" type="Label" parent="Control"]
+margin_left = 571.378
+margin_top = 472.583
+margin_right = 861.378
+margin_bottom = 541.583
+rect_scale = Vector2( 0.3, 0.3 )
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0.964706, 0.105882, 0.105882, 1 )
+text = "Winter fury"
+
+[node name="Soul Melter" type="Label" parent="Control"]
+margin_left = 742.394
+margin_top = 472.327
+margin_right = 1066.39
+margin_bottom = 541.327
+rect_scale = Vector2( 0.3, 0.3 )
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0.964706, 0.105882, 0.105882, 1 )
+text = "Soul Melter"
+
+[node name="Animation" type="AnimationPlayer" parent="."]
+autoplay = "Intro"
+anims/Blink = SubResource( 3 )
+anims/Intro = SubResource( 4 )
+
+[node name="GoBackButton" type="Area2D" parent="."]
+
+[node name="Sprite" type="Sprite" parent="GoBackButton"]
+position = Vector2( 101.247, 544.585 )
+scale = Vector2( 0.391513, 0.455369 )
+texture = ExtResource( 41 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="GoBackButton"]
+polygon = PoolVector2Array( 104.898, 501.518, 184.396, 503.304, 193.775, 509.557, 193.775, 575.21, 185.736, 584.142, 16.4678, 584.589, 7.53548, 576.996, 6.64225, 511.343, 13.3415, 504.197, 62.0229, 502.411 )
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 42 )
+autoplay = true
+
+[node name="PlayerSelection" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 43 )
+[connection signal="input_event" from="Fighter1" to="." method="_on_Fighter1_input_event"]
+[connection signal="mouse_entered" from="Fighter1" to="." method="_on_Fighter1_mouse_entered"]
+[connection signal="mouse_exited" from="Fighter1" to="." method="_on_Fighter1_mouse_exited"]
+[connection signal="input_event" from="Fighter2" to="." method="_on_Fighter2_input_event"]
+[connection signal="mouse_entered" from="Fighter2" to="." method="_on_Fighter2_mouse_entered"]
+[connection signal="mouse_exited" from="Fighter2" to="." method="_on_Fighter2_mouse_exited"]
+[connection signal="input_event" from="Fighter3" to="." method="_on_Fighter3_input_event"]
+[connection signal="mouse_entered" from="Fighter3" to="." method="_on_Fighter3_mouse_entered"]
+[connection signal="mouse_exited" from="Fighter3" to="." method="_on_Fighter3_mouse_exited"]
+[connection signal="input_event" from="Fighter4" to="." method="_on_Fighter4_input_event"]
+[connection signal="mouse_entered" from="Fighter4" to="." method="_on_Fighter4_mouse_entered"]
+[connection signal="mouse_exited" from="Fighter4" to="." method="_on_Fighter4_mouse_exited"]
+[connection signal="input_event" from="Fighter5" to="." method="_on_Fighter5_input_event"]
+[connection signal="mouse_entered" from="Fighter5" to="." method="_on_Fighter5_mouse_entered"]
+[connection signal="mouse_exited" from="Fighter5" to="." method="_on_Fighter5_mouse_exited"]
+[connection signal="input_event" from="Fighter6" to="." method="_on_Fighter6_input_event"]
+[connection signal="mouse_entered" from="Fighter6" to="." method="_on_Fighter6_mouse_entered"]
+[connection signal="mouse_exited" from="Fighter6" to="." method="_on_Fighter6_mouse_exited"]
+[connection signal="input_event" from="Fighter7" to="." method="_on_Fighter7_input_event"]
+[connection signal="mouse_entered" from="Fighter7" to="." method="_on_Fighter7_mouse_entered"]
+[connection signal="mouse_exited" from="Fighter7" to="." method="_on_Fighter7_mouse_exited"]
+[connection signal="input_event" from="Fighter8" to="." method="_on_Fighter8_input_event"]
+[connection signal="mouse_entered" from="Fighter8" to="." method="_on_Fighter8_mouse_entered"]
+[connection signal="mouse_exited" from="Fighter8" to="." method="_on_Fighter8_mouse_exited"]
+[connection signal="animation_finished" from="Animation" to="." method="_on_Animation_animation_finished"]
+[connection signal="input_event" from="GoBackButton" to="." method="_on_GoBackButton_input_event"]
+[connection signal="mouse_entered" from="GoBackButton" to="." method="_on_GoBackButton_mouse_entered"]
+[connection signal="mouse_exited" from="GoBackButton" to="." method="_on_GoBackButton_mouse_exited"]

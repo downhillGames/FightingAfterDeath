@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/NoWinner.wav-fb8f618cfaf38ecebf4c568e5ddeaa31.sample"
+
+[deps]
+
+source_file="res://Assets/Audio/NoWinner.wav"
+dest_files=[ "res://.import/NoWinner.wav-fb8f618cfaf38ecebf4c568e5ddeaa31.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

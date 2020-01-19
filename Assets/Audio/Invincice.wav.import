@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Invincice.wav-7e4e28559715881cbab367041044a985.sample"
+
+[deps]
+
+source_file="res://Assets/Audio/Invincice.wav"
+dest_files=[ "res://.import/Invincice.wav-7e4e28559715881cbab367041044a985.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

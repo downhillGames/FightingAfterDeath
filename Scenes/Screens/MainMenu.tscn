@@ -1,0 +1,141 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Scripts/MainMenu.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Screens/FightingAfterDeathMain.PNG" type="Texture" id=2]
+[ext_resource path="res://Assets/Button/DownhillGames Logo.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Button/FightButton.png" type="Texture" id=4]
+[ext_resource path="res://Assets/Button/HelpButton.png" type="Texture" id=5]
+[ext_resource path="res://Assets/Button/QuitButton.png" type="Texture" id=6]
+[ext_resource path="res://Assets/Audio/Crack the Underground Base (Long - OGG).ogg" type="AudioStream" id=7]
+
+[sub_resource type="Animation" id=1]
+resource_name = "Blink"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray(  ),
+"transitions": PoolRealArray(  ),
+"update": 1,
+"values": [  ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("QuitButton/Sprite:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("FightButton/Sprite:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("HelpButton/Sprite:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+
+[sub_resource type="Animation" id=2]
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[node name="MainMenu" type="Node2D"]
+modulate = Color( 1, 1, 1, 0 )
+script = ExtResource( 1 )
+
+[node name="Animation" type="AnimationPlayer" parent="."]
+autoplay = "Intro"
+anims/Blink = SubResource( 1 )
+anims/Intro = SubResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 524.788, 313.822 )
+scale = Vector2( 1.07293, 1.06158 )
+texture = ExtResource( 2 )
+
+[node name="DownhillGames Logo" type="Sprite" parent="."]
+position = Vector2( 738.99, 527.387 )
+scale = Vector2( 0.213996, 0.219144 )
+texture = ExtResource( 3 )
+
+[node name="FightButton" type="Area2D" parent="."]
+position = Vector2( 222.484, 325 )
+
+[node name="Sprite" type="Sprite" parent="FightButton"]
+visible = false
+position = Vector2( 72.6347, 54.476 )
+texture = ExtResource( 4 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="FightButton"]
+polygon = PoolVector2Array( -7.15808, 0.189514, 154.131, 0.189514, 160.323, 2.15988, 165.671, 5.81912, 169.612, 12.5747, 170.456, 93.9227, 165.044, 103.472, 156.311, 106.279, 78.9621, 105.967, -5.56018, 105.967, -14.605, 105.967, -23.9617, 100.041, -26.7687, 91.6201, -27.0806, 22.6923, -26.7687, 13.0238, -22.7141, 6.16217, -16.7882, 1.79572 )
+
+[node name="HelpButton" type="Area2D" parent="."]
+position = Vector2( 466.379, 325 )
+
+[node name="Sprite" type="Sprite" parent="HelpButton"]
+visible = false
+position = Vector2( 72.544, 53.0753 )
+scale = Vector2( 0.547822, 0.542247 )
+texture = ExtResource( 5 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="HelpButton"]
+polygon = PoolVector2Array( -7.15808, 0.189514, 154.131, 0.189514, 160.323, 2.15988, 165.671, 5.81912, 169.612, 12.5747, 170.456, 93.9227, 165.044, 103.472, 156.311, 106.279, 78.9621, 105.967, -5.56018, 105.967, -14.605, 105.967, -23.9617, 100.041, -26.7687, 91.6201, -27.0806, 22.6923, -26.7687, 13.0238, -22.7141, 6.16217, -16.7882, 1.79572 )
+
+[node name="QuitButton" type="Area2D" parent="."]
+position = Vector2( 695.905, 325 )
+
+[node name="Sprite" type="Sprite" parent="QuitButton"]
+visible = false
+position = Vector2( 69.5202, 53.2301 )
+scale = Vector2( 0.497119, 0.506477 )
+texture = ExtResource( 6 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="QuitButton"]
+polygon = PoolVector2Array( -17.5553, 8.21576, -7.07538, 3.78195, 142.465, 4.99118, 150.526, 9.02191, 153.751, 15.8741, 154.154, 74.7228, 154.154, 92.8611, 144.883, 100.116, 120.699, 100.116, 32.0226, 101.326, -4.65698, 101.326, -14.3307, 99.3102, -21.9891, 88.4273, -23.1984, 50.5384, -23.1984, 22.3233 )
+
+[node name="Music" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 7 )
+autoplay = true
+[connection signal="animation_finished" from="Animation" to="." method="_on_AnimationPlayer_animation_finished"]
+[connection signal="input_event" from="FightButton" to="." method="_on_FightButton_input_event"]
+[connection signal="mouse_entered" from="FightButton" to="." method="_on_FightButton_mouse_entered"]
+[connection signal="mouse_exited" from="FightButton" to="." method="_on_FightButton_mouse_exited"]
+[connection signal="input_event" from="QuitButton" to="." method="_on_QuitButton_input_event"]
+[connection signal="mouse_entered" from="QuitButton" to="." method="_on_QuitButton_mouse_entered"]
+[connection signal="mouse_exited" from="QuitButton" to="." method="_on_QuitButton_mouse_exited"]
