@@ -1,4 +1,4 @@
-[gd_scene load_steps=64 format=2]
+[gd_scene load_steps=65 format=2]
 
 [ext_resource path="res://Scripts/connect.gd" type="Script" id=1]
 [ext_resource path="res://Scripts/Player.gd" type="Script" id=2]
@@ -50,10 +50,11 @@
 [ext_resource path="res://Assets/Audio/slightscream-09.wav" type="AudioStream" id=48]
 [ext_resource path="res://Assets/Audio/slightscream-10.wav" type="AudioStream" id=49]
 [ext_resource path="res://Assets/Audio/SecondChance.wav" type="AudioStream" id=50]
-[ext_resource path="res://Assets/Audio/Health.wav" type="AudioStream" id=51]
-[ext_resource path="res://Assets/Audio/Fireball.wav" type="AudioStream" id=52]
-[ext_resource path="res://Assets/Audio/DoubleDamage.wav" type="AudioStream" id=53]
-[ext_resource path="res://Assets/Audio/LightningStrike.wav" type="AudioStream" id=54]
+[ext_resource path="res://Assets/Audio/Invincice.wav" type="AudioStream" id=51]
+[ext_resource path="res://Assets/Audio/Health.wav" type="AudioStream" id=52]
+[ext_resource path="res://Assets/Audio/Fireball.wav" type="AudioStream" id=53]
+[ext_resource path="res://Assets/Audio/DoubleDamage.wav" type="AudioStream" id=54]
+[ext_resource path="res://Assets/Audio/LightningStrike.wav" type="AudioStream" id=55]
 
 [sub_resource type="Animation" id=1]
 resource_name = "Attack_1"
@@ -817,13 +818,14 @@ stream = ExtResource( 50 )
 stream = ExtResource( 51 )
 
 [node name="Health" type="AudioStreamPlayer2D" parent="Player/Sounds/PowerUpSounds"]
-
-[node name="Fireball" type="AudioStreamPlayer2D" parent="Player/Sounds/PowerUpSounds"]
 stream = ExtResource( 52 )
 
-[node name="DoubleDamage" type="AudioStreamPlayer2D" parent="Player/Sounds/PowerUpSounds"]
+[node name="Fireball" type="AudioStreamPlayer2D" parent="Player/Sounds/PowerUpSounds"]
 stream = ExtResource( 53 )
 
-[node name="LightningStrike" type="AudioStreamPlayer2D" parent="Player/Sounds/PowerUpSounds"]
+[node name="DoubleDamage" type="AudioStreamPlayer2D" parent="Player/Sounds/PowerUpSounds"]
 stream = ExtResource( 54 )
+
+[node name="LightningStrike" type="AudioStreamPlayer2D" parent="Player/Sounds/PowerUpSounds"]
+stream = ExtResource( 55 )
 [connection signal="animation_finished" from="Player/Animation" to="Player" method="_on_Animation_animation_finished"]

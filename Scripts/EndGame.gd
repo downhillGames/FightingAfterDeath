@@ -18,8 +18,31 @@ func _ready():
 	else:
 		get_node("game_draw").visible = true
 
-
-
+	if (global.winner_character == 1):
+		$"Node2D/Fighter1".visible = true
+		$"Node2D/Control/Imp".visible = true
+	elif (global.winner_character == 2):
+		$"Node2D/Fighter2".visible = true
+		$"Node2D/Control/Knight".visible = true
+	elif (global.winner_character == 3):
+		$"Node2D/Fighter3".visible = true
+		$"Node2D/Control/Reaper".visible = true
+	elif (global.winner_character == 4):
+		$"Node2D/Fighter4".visible = true
+		$"Node2D/Control/Night Stalker".visible = true
+	elif (global.winner_character == 5):
+		$"Node2D/Fighter5".visible = true
+		$"Node2D/Control/Dark Moon".visible = true
+	elif (global.winner_character == 6):
+		$"Node2D/Fighter6".visible = true
+		$"Node2D/Control/Dark Moon".visible = true
+	elif (global.winner_character == 7):
+		$"Node2D/Fighter7".visible = true
+		$"Node2D/Control/Winter Fury".visible = true
+	elif (global.winner_character == 8):
+		$"Node2D/Fighter8".visible = true
+		$"Node2D/Control/Soul Melter".visible = true
+		
 func _on_QuitButton_mouse_entered():
 	mouse_over_quit = true
 
@@ -48,7 +71,7 @@ func _on_MenuButton_input_event(viewport, event, shape_idx):
 
 func _on_Animation_animation_finished(anim_name):
 	if (anim_name == "Intro"):
-		$Animation.play("Blink")
+		$Node2D/Animation.play("Blink")
 	
 		if global.winner == 1:
 			$Player1Wins.play()

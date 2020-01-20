@@ -3,7 +3,7 @@ extends Node2D
 
 var mouse_over_fight = false
 var mouse_over_quit = false
-
+var mouse_over_help = false
 
 
 
@@ -38,3 +38,15 @@ func _on_QuitButton_mouse_exited():
 func _on_QuitButton_input_event(viewport, event, shape_idx):
 	if mouse_over_quit and event.is_pressed() and event.button_index == BUTTON_LEFT:
 		get_tree().quit()
+
+func _on_HelpButton_mouse_entered():
+	mouse_over_help = true
+
+
+func _on_HelpButton_mouse_exited():
+	mouse_over_help = false
+
+
+func _on_HelpButton_input_event(viewport, event, shape_idx):
+	if mouse_over_help and event.is_pressed() and event.button_index == BUTTON_LEFT:
+		get_tree().change_scene("res://Scenes/Screens/Help1.tscn")

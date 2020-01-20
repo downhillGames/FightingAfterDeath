@@ -31,7 +31,7 @@ func _ready():
 	add_child(_game_timer)
 	_game_timer.connect("timeout", self, "_on_Timer_timeout")
 	#_game_timer.set_wait_time(300.0)
-	_game_timer.set_wait_time(30.0)
+	_game_timer.set_wait_time(300.0)
 	_game_timer.set_one_shot(true) 
 	_game_timer.start()
 	
@@ -84,7 +84,7 @@ func _on_Timer_timeout():
 	var _new_timer = Timer.new()
 	add_child(_new_timer)
 	_new_timer.connect("timeout", self, "_on_new_Timer_timeout")
-	_new_timer.set_wait_time(1)
+	_new_timer.set_wait_time(2.00)
 	_new_timer.set_one_shot(true) 
 	_new_timer.start()
 
@@ -93,10 +93,11 @@ func declare_winner():
 	var characters_array = []
 	var scores_array = []
 	var player_array = []
+	var character_array = []
 	var high = 0
 	var index
 	var player
-
+	var character
 
 	for child in self.get_children():
 		if child.has_method("get_health" ):
@@ -108,18 +109,21 @@ func declare_winner():
 				high = characters_array[i].get_health()
 				player = characters_array[i].get_player_num()
 				index = i
+				character = characters_array[i].get_character_num()
 		characters_array.remove(index)
 		scores_array.append(high)
 		player_array.append(player)
+		character_array.append(character)
 		high = 0
 
-	
+	character_array.append(characters_array[0].get_character_num())
 	scores_array.append(characters_array[0].get_health())
 	player_array.append(characters_array[0].get_player_num())
 	
 	if (scores_array[0] == scores_array[1]):
 		return 5
 	else:
+		global.winner_character = character_array[0]
 		return player_array[0]
 
 func player_one_spawn(spawn_x, spawn_y):

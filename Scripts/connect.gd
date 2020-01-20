@@ -4,6 +4,8 @@ extends Node2D
 func _ready():
 	pass # Replace with function body.
 
+func get_character_num():
+	return get_node("Player").character_number
 
 func set_player(player_int):
 	if player_int == 1:

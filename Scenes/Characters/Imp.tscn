@@ -1,4 +1,4 @@
-[gd_scene load_steps=67 format=2]
+[gd_scene load_steps=68 format=2]
 
 [ext_resource path="res://Scripts/connect.gd" type="Script" id=1]
 [ext_resource path="res://Scripts/Player.gd" type="Script" id=2]
@@ -13,50 +13,51 @@
 [ext_resource path="res://Assets/Audio/slightscream-09.wav" type="AudioStream" id=11]
 [ext_resource path="res://Assets/Audio/slightscream-10.wav" type="AudioStream" id=12]
 [ext_resource path="res://Assets/Audio/SecondChance.wav" type="AudioStream" id=13]
-[ext_resource path="res://Assets/Audio/Health.wav" type="AudioStream" id=14]
-[ext_resource path="res://Assets/Audio/Fireball.wav" type="AudioStream" id=15]
-[ext_resource path="res://Assets/Audio/DoubleDamage.wav" type="AudioStream" id=16]
-[ext_resource path="res://Assets/Audio/LightningStrike.wav" type="AudioStream" id=17]
-[ext_resource path="res://Assets/Imp/ready_1.png" type="Texture" id=18]
-[ext_resource path="res://Assets/Imp/attack1_1.png" type="Texture" id=19]
-[ext_resource path="res://Assets/Imp/attack1_2.png" type="Texture" id=20]
-[ext_resource path="res://Assets/Imp/attack1_3.png" type="Texture" id=21]
-[ext_resource path="res://Assets/Imp/attack1_4.png" type="Texture" id=22]
-[ext_resource path="res://Assets/Imp/attack1_5.png" type="Texture" id=23]
-[ext_resource path="res://Assets/Imp/attack1_6.png" type="Texture" id=24]
-[ext_resource path="res://Assets/Imp/attack2_1.png" type="Texture" id=25]
-[ext_resource path="res://Assets/Imp/attack2_2.png" type="Texture" id=26]
-[ext_resource path="res://Assets/Imp/attack2_3.png" type="Texture" id=27]
-[ext_resource path="res://Assets/Imp/attack2_4.png" type="Texture" id=28]
-[ext_resource path="res://Assets/Imp/attack2_5.png" type="Texture" id=29]
-[ext_resource path="res://Assets/Imp/attack2_6.png" type="Texture" id=30]
-[ext_resource path="res://Assets/Imp/fall_back_1.png" type="Texture" id=31]
-[ext_resource path="res://Assets/Imp/fall_back_2.png" type="Texture" id=32]
-[ext_resource path="res://Assets/Imp/fall_back_3.png" type="Texture" id=33]
-[ext_resource path="res://Assets/Imp/fall_back_4.png" type="Texture" id=34]
-[ext_resource path="res://Assets/Imp/fall_back_5.png" type="Texture" id=35]
-[ext_resource path="res://Assets/Imp/stand_up_1.png" type="Texture" id=36]
-[ext_resource path="res://Assets/Imp/stand_up_2.png" type="Texture" id=37]
-[ext_resource path="res://Assets/Imp/stand_up_3.png" type="Texture" id=38]
-[ext_resource path="res://Assets/Imp/stand_up_5.png" type="Texture" id=39]
-[ext_resource path="res://Assets/Imp/stand_up_4.png" type="Texture" id=40]
-[ext_resource path="res://Assets/Imp/ready_2.png" type="Texture" id=41]
-[ext_resource path="res://Assets/Imp/ready_3.png" type="Texture" id=42]
-[ext_resource path="res://Assets/Imp/ready_4.png" type="Texture" id=43]
-[ext_resource path="res://Assets/Imp/ready_5.png" type="Texture" id=44]
-[ext_resource path="res://Assets/Imp/ready_6.png" type="Texture" id=45]
-[ext_resource path="res://Assets/Imp/jump_1.png" type="Texture" id=46]
-[ext_resource path="res://Assets/Imp/jump_2.png" type="Texture" id=47]
-[ext_resource path="res://Assets/Imp/jump_3.png" type="Texture" id=48]
-[ext_resource path="res://Assets/Imp/jump_4.png" type="Texture" id=49]
-[ext_resource path="res://Assets/Imp/jump_5.png" type="Texture" id=50]
-[ext_resource path="res://Assets/Imp/run_1.png" type="Texture" id=51]
-[ext_resource path="res://Assets/Imp/run_2.png" type="Texture" id=52]
-[ext_resource path="res://Assets/Imp/run_3.png" type="Texture" id=53]
-[ext_resource path="res://Assets/Imp/run_4.png" type="Texture" id=54]
-[ext_resource path="res://Assets/Imp/run_5.png" type="Texture" id=55]
-[ext_resource path="res://Assets/Imp/run_6.png" type="Texture" id=56]
-[ext_resource path="res://Assets/Power_template2.png" type="Texture" id=57]
+[ext_resource path="res://Assets/Audio/Invincice.wav" type="AudioStream" id=14]
+[ext_resource path="res://Assets/Audio/Health.wav" type="AudioStream" id=15]
+[ext_resource path="res://Assets/Audio/Fireball.wav" type="AudioStream" id=16]
+[ext_resource path="res://Assets/Audio/DoubleDamage.wav" type="AudioStream" id=17]
+[ext_resource path="res://Assets/Audio/LightningStrike.wav" type="AudioStream" id=18]
+[ext_resource path="res://Assets/Imp/ready_1.png" type="Texture" id=19]
+[ext_resource path="res://Assets/Imp/attack1_1.png" type="Texture" id=20]
+[ext_resource path="res://Assets/Imp/attack1_2.png" type="Texture" id=21]
+[ext_resource path="res://Assets/Imp/attack1_3.png" type="Texture" id=22]
+[ext_resource path="res://Assets/Imp/attack1_4.png" type="Texture" id=23]
+[ext_resource path="res://Assets/Imp/attack1_5.png" type="Texture" id=24]
+[ext_resource path="res://Assets/Imp/attack1_6.png" type="Texture" id=25]
+[ext_resource path="res://Assets/Imp/attack2_1.png" type="Texture" id=26]
+[ext_resource path="res://Assets/Imp/attack2_2.png" type="Texture" id=27]
+[ext_resource path="res://Assets/Imp/attack2_3.png" type="Texture" id=28]
+[ext_resource path="res://Assets/Imp/attack2_4.png" type="Texture" id=29]
+[ext_resource path="res://Assets/Imp/attack2_5.png" type="Texture" id=30]
+[ext_resource path="res://Assets/Imp/attack2_6.png" type="Texture" id=31]
+[ext_resource path="res://Assets/Imp/fall_back_1.png" type="Texture" id=32]
+[ext_resource path="res://Assets/Imp/fall_back_2.png" type="Texture" id=33]
+[ext_resource path="res://Assets/Imp/fall_back_3.png" type="Texture" id=34]
+[ext_resource path="res://Assets/Imp/fall_back_4.png" type="Texture" id=35]
+[ext_resource path="res://Assets/Imp/fall_back_5.png" type="Texture" id=36]
+[ext_resource path="res://Assets/Imp/stand_up_1.png" type="Texture" id=37]
+[ext_resource path="res://Assets/Imp/stand_up_2.png" type="Texture" id=38]
+[ext_resource path="res://Assets/Imp/stand_up_3.png" type="Texture" id=39]
+[ext_resource path="res://Assets/Imp/stand_up_5.png" type="Texture" id=40]
+[ext_resource path="res://Assets/Imp/stand_up_4.png" type="Texture" id=41]
+[ext_resource path="res://Assets/Imp/ready_2.png" type="Texture" id=42]
+[ext_resource path="res://Assets/Imp/ready_3.png" type="Texture" id=43]
+[ext_resource path="res://Assets/Imp/ready_4.png" type="Texture" id=44]
+[ext_resource path="res://Assets/Imp/ready_5.png" type="Texture" id=45]
+[ext_resource path="res://Assets/Imp/ready_6.png" type="Texture" id=46]
+[ext_resource path="res://Assets/Imp/jump_1.png" type="Texture" id=47]
+[ext_resource path="res://Assets/Imp/jump_2.png" type="Texture" id=48]
+[ext_resource path="res://Assets/Imp/jump_3.png" type="Texture" id=49]
+[ext_resource path="res://Assets/Imp/jump_4.png" type="Texture" id=50]
+[ext_resource path="res://Assets/Imp/jump_5.png" type="Texture" id=51]
+[ext_resource path="res://Assets/Imp/run_1.png" type="Texture" id=52]
+[ext_resource path="res://Assets/Imp/run_2.png" type="Texture" id=53]
+[ext_resource path="res://Assets/Imp/run_3.png" type="Texture" id=54]
+[ext_resource path="res://Assets/Imp/run_4.png" type="Texture" id=55]
+[ext_resource path="res://Assets/Imp/run_5.png" type="Texture" id=56]
+[ext_resource path="res://Assets/Imp/run_6.png" type="Texture" id=57]
+[ext_resource path="res://Assets/Power_template2.png" type="Texture" id=58]
 
 [sub_resource type="Animation" id=1]
 resource_name = "Attack_1_left"
@@ -71,7 +72,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ) ]
+"values": [ ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("Sprite:offset")
@@ -159,7 +160,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ) ]
+"values": [ ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("Sprite:offset")
@@ -247,7 +248,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ ExtResource( 25 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 29 ), ExtResource( 30 ) ]
+"values": [ ExtResource( 26 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 29 ), ExtResource( 30 ), ExtResource( 31 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("CollisionPolygon2D:position")
@@ -335,7 +336,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ ExtResource( 25 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 29 ), ExtResource( 30 ) ]
+"values": [ ExtResource( 26 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 29 ), ExtResource( 30 ), ExtResource( 31 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("CollisionPolygon2D:position")
@@ -423,7 +424,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8, 2.1, 2.3, 2.5, 2.7, 2.9 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ ExtResource( 31 ), ExtResource( 32 ), ExtResource( 33 ), ExtResource( 34 ), ExtResource( 35 ), ExtResource( 36 ), ExtResource( 37 ), ExtResource( 38 ), ExtResource( 39 ), ExtResource( 40 ) ]
+"values": [ ExtResource( 32 ), ExtResource( 33 ), ExtResource( 34 ), ExtResource( 35 ), ExtResource( 36 ), ExtResource( 37 ), ExtResource( 38 ), ExtResource( 39 ), ExtResource( 40 ), ExtResource( 41 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("Sprite:modulate")
@@ -463,7 +464,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.291859, 0.3, 0.6, 0.9, 1.2, 1.5 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ ExtResource( 18 ), ExtResource( 41 ), ExtResource( 18 ), ExtResource( 42 ), ExtResource( 43 ), ExtResource( 44 ), ExtResource( 45 ) ]
+"values": [ ExtResource( 19 ), ExtResource( 42 ), ExtResource( 19 ), ExtResource( 43 ), ExtResource( 44 ), ExtResource( 45 ), ExtResource( 46 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("Sprite:offset")
@@ -561,7 +562,7 @@ tracks/1/keys = {
 "times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ ExtResource( 46 ), ExtResource( 47 ), ExtResource( 48 ), ExtResource( 49 ), ExtResource( 50 ) ]
+"values": [ ExtResource( 47 ), ExtResource( 48 ), ExtResource( 49 ), ExtResource( 50 ), ExtResource( 51 ) ]
 }
 tracks/2/type = "value"
 tracks/2/path = NodePath(".:exposed")
@@ -623,7 +624,7 @@ tracks/1/keys = {
 "times": PoolRealArray( 0, 0.1, 0.3, 0.5, 0.7, 0.9 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ ExtResource( 51 ), ExtResource( 52 ), ExtResource( 53 ), ExtResource( 54 ), ExtResource( 55 ), ExtResource( 56 ) ]
+"values": [ ExtResource( 52 ), ExtResource( 53 ), ExtResource( 54 ), ExtResource( 55 ), ExtResource( 56 ), ExtResource( 57 ) ]
 }
 tracks/2/type = "value"
 tracks/2/path = NodePath(".:attacking")
@@ -675,7 +676,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.1, 0.3, 0.9, 1.2, 1.5 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ ExtResource( 18 ), ExtResource( 41 ), ExtResource( 18 ), ExtResource( 43 ), ExtResource( 44 ), ExtResource( 45 ) ]
+"values": [ ExtResource( 19 ), ExtResource( 42 ), ExtResource( 19 ), ExtResource( 44 ), ExtResource( 45 ), ExtResource( 46 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("Sprite:offset")
@@ -819,19 +820,20 @@ stream = ExtResource( 13 )
 stream = ExtResource( 14 )
 
 [node name="Health" type="AudioStreamPlayer2D" parent="Player/Sounds/PowerUpSounds"]
-
-[node name="Fireball" type="AudioStreamPlayer2D" parent="Player/Sounds/PowerUpSounds"]
 stream = ExtResource( 15 )
 
-[node name="DoubleDamage" type="AudioStreamPlayer2D" parent="Player/Sounds/PowerUpSounds"]
+[node name="Fireball" type="AudioStreamPlayer2D" parent="Player/Sounds/PowerUpSounds"]
 stream = ExtResource( 16 )
 
-[node name="LightningStrike" type="AudioStreamPlayer2D" parent="Player/Sounds/PowerUpSounds"]
+[node name="DoubleDamage" type="AudioStreamPlayer2D" parent="Player/Sounds/PowerUpSounds"]
 stream = ExtResource( 17 )
+
+[node name="LightningStrike" type="AudioStreamPlayer2D" parent="Player/Sounds/PowerUpSounds"]
+stream = ExtResource( 18 )
 
 [node name="Sprite" type="Sprite" parent="Player"]
 scale = Vector2( 0.999589, 1.00489 )
-texture = ExtResource( 18 )
+texture = ExtResource( 19 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Player"]
 polygon = PoolVector2Array( -6.8025, -3.24746, -3.76808, -5.55939, -5.79102, -12.0617, -4.20157, -11.4837, 1.28928, -10.9058, 3.74572, -12.3507, 2.15626, -7.72684, 2.44525, -5.12591, 5.19068, -3.53645, 4.61269, -0.502033, 9.67006, 4.26634, 7.9361, 5.8558, 2.01176, 3.97735, 7.06913, 16.8375, 6.20215, 19.2939, 0.42231, 7.73425, -4.49056, 16.982, -7.95847, 19.4384, -4.63506, 7.30076, -5.50203, 7.01176, -6.94699, 8.16773, -7.66947, 3.97735, -9.54792, 1.08743 )
@@ -851,5 +853,5 @@ anims/Shield = SubResource( 9 )
 visible = false
 position = Vector2( 0, 3.91223 )
 scale = Vector2( 1.36677, 1.35862 )
-texture = ExtResource( 57 )
+texture = ExtResource( 58 )
 [connection signal="animation_finished" from="Player/Animation" to="Player" method="_on_Animation_animation_finished"]

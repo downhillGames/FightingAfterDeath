@@ -1,0 +1,56 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Scripts/Help2.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Screens/Help2.PNG" type="Texture" id=2]
+[ext_resource path="res://Assets/Button/MenuButton.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Button/output-onlinepngtools(1).png" type="Texture" id=4]
+
+[node name="Help2" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+
+[node name="Help1" type="Sprite" parent="Sprite"]
+position = Vector2( 510.994, 297.39 )
+scale = Vector2( 0.740831, 0.840636 )
+texture = ExtResource( 2 )
+
+[node name="MenuButton" type="Area2D" parent="."]
+
+[node name="Sprite" type="Sprite" parent="MenuButton"]
+position = Vector2( 100.451, 525 )
+scale = Vector2( 0.442485, 0.42304 )
+texture = ExtResource( 3 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="MenuButton"]
+polygon = PoolVector2Array( 73, 481, 171, 485, 177, 494, 177, 559, 157, 567, 65, 566, 31, 564, 20, 552, 21, 496, 30, 482 )
+
+[node name="NextArrow" type="Area2D" parent="."]
+
+[node name="Sprite" type="Sprite" parent="NextArrow"]
+position = Vector2( 950.449, 525 )
+scale = Vector2( 0.13633, 0.135803 )
+texture = ExtResource( 4 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="NextArrow"]
+polygon = PoolVector2Array( 910.355, 483.395, 1002.49, 483.754, 1011.45, 489.848, 1013.6, 524.98, 1011.09, 560.111, 1003.92, 569.432, 905.336, 568.357, 888.845, 566.564, 885.978, 538.244, 888.845, 490.207, 898.525, 483.395 )
+
+[node name="BackArrow" type="Area2D" parent="."]
+
+[node name="Sprite" type="Sprite" parent="BackArrow"]
+position = Vector2( 806.526, 525 )
+rotation = 3.14159
+scale = Vector2( 0.13633, 0.135803 )
+texture = ExtResource( 4 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="BackArrow"]
+polygon = PoolVector2Array( 792.771, 481.961, 854.072, 481.603, 866.261, 486.622, 872.355, 519.244, 868.77, 558.677, 858.733, 566.923, 769.828, 566.564, 745.451, 563.338, 742.942, 528.206, 744.376, 491.999, 749.394, 484.112, 779.866, 480.886 )
+[connection signal="input_event" from="MenuButton" to="." method="_on_MenuButton_input_event"]
+[connection signal="mouse_entered" from="MenuButton" to="." method="_on_MenuButton_mouse_entered"]
+[connection signal="mouse_exited" from="MenuButton" to="." method="_on_MenuButton_mouse_exited"]
+[connection signal="input_event" from="NextArrow" to="." method="_on_NextArrow_input_event"]
+[connection signal="mouse_entered" from="NextArrow" to="." method="_on_NextArrow_mouse_entered"]
+[connection signal="mouse_exited" from="NextArrow" to="." method="_on_NextArrow_mouse_exited"]
+[connection signal="input_event" from="BackArrow" to="." method="_on_BackArrow_input_event"]
+[connection signal="mouse_entered" from="BackArrow" to="." method="_on_BackArrow_mouse_entered"]
+[connection signal="mouse_exited" from="BackArrow" to="." method="_on_BackArrow_mouse_exited"]

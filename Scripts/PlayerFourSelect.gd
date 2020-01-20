@@ -80,7 +80,7 @@ func _ready():
 	elif (global.player_three_character == 6):
 		$Fighter6.visible = false
 		$"Control/Master Killer".visible = false
-	elif (global.player_threeo_character == 7):
+	elif (global.player_three_character == 7):
 		$Fighter7.visible = false
 		$"Control/Winter Fury".visible = false
 	elif (global.player_three_character == 8):

@@ -1,8 +1,8 @@
-[gd_scene load_steps=55 format=2]
+[gd_scene load_steps=56 format=2]
 
 [ext_resource path="res://Scripts/connect.gd" type="Script" id=1]
 [ext_resource path="res://Scripts/Player.gd" type="Script" id=2]
-[ext_resource path="res://Assets/Reaper/Idle2.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Reaper/Idle1.png" type="Texture" id=3]
 [ext_resource path="res://Assets/Reaper/Attack1_1.png" type="Texture" id=4]
 [ext_resource path="res://Assets/Reaper/Attack1_2.png" type="Texture" id=5]
 [ext_resource path="res://Assets/Reaper/Attack1_3.png" type="Texture" id=6]
@@ -16,7 +16,7 @@
 [ext_resource path="res://Assets/Reaper/Death3.png" type="Texture" id=14]
 [ext_resource path="res://Assets/Reaper/Death4.png" type="Texture" id=15]
 [ext_resource path="res://Assets/NightStalker/Death1.png" type="Texture" id=16]
-[ext_resource path="res://Assets/Reaper/Idle1.png" type="Texture" id=17]
+[ext_resource path="res://Assets/Reaper/Idle2.png" type="Texture" id=17]
 [ext_resource path="res://Assets/Reaper/Idle3.png" type="Texture" id=18]
 [ext_resource path="res://Assets/Reaper/Idle4.png" type="Texture" id=19]
 [ext_resource path="res://Assets/Reaper/Jump1.png" type="Texture" id=20]
@@ -41,10 +41,11 @@
 [ext_resource path="res://Assets/Audio/slightscream-09.wav" type="AudioStream" id=39]
 [ext_resource path="res://Assets/Audio/slightscream-10.wav" type="AudioStream" id=40]
 [ext_resource path="res://Assets/Audio/SecondChance.wav" type="AudioStream" id=41]
-[ext_resource path="res://Assets/Audio/Health.wav" type="AudioStream" id=42]
-[ext_resource path="res://Assets/Audio/Fireball.wav" type="AudioStream" id=43]
-[ext_resource path="res://Assets/Audio/DoubleDamage.wav" type="AudioStream" id=44]
-[ext_resource path="res://Assets/Audio/LightningStrike.wav" type="AudioStream" id=45]
+[ext_resource path="res://Assets/Audio/Invincice.wav" type="AudioStream" id=42]
+[ext_resource path="res://Assets/Audio/Health.wav" type="AudioStream" id=43]
+[ext_resource path="res://Assets/Audio/Fireball.wav" type="AudioStream" id=44]
+[ext_resource path="res://Assets/Audio/DoubleDamage.wav" type="AudioStream" id=45]
+[ext_resource path="res://Assets/Audio/LightningStrike.wav" type="AudioStream" id=46]
 
 [sub_resource type="Animation" id=1]
 resource_name = "Attack_1_left"
@@ -451,7 +452,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.2, 0.4, 0.6 ),
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 1,
-"values": [ ExtResource( 17 ), ExtResource( 3 ), ExtResource( 18 ), ExtResource( 19 ) ]
+"values": [ ExtResource( 3 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("Sprite:offset")
@@ -666,7 +667,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.3 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
-"values": [ ExtResource( 17 ), ExtResource( 3 ) ]
+"values": [ ExtResource( 3 ), ExtResource( 17 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("Sprite:offset")
@@ -834,13 +835,14 @@ stream = ExtResource( 41 )
 stream = ExtResource( 42 )
 
 [node name="Health" type="AudioStreamPlayer2D" parent="Player/Sounds/PowerUpSounds"]
-
-[node name="Fireball" type="AudioStreamPlayer2D" parent="Player/Sounds/PowerUpSounds"]
 stream = ExtResource( 43 )
 
-[node name="DoubleDamage" type="AudioStreamPlayer2D" parent="Player/Sounds/PowerUpSounds"]
+[node name="Fireball" type="AudioStreamPlayer2D" parent="Player/Sounds/PowerUpSounds"]
 stream = ExtResource( 44 )
 
-[node name="LightningStrike" type="AudioStreamPlayer2D" parent="Player/Sounds/PowerUpSounds"]
+[node name="DoubleDamage" type="AudioStreamPlayer2D" parent="Player/Sounds/PowerUpSounds"]
 stream = ExtResource( 45 )
+
+[node name="LightningStrike" type="AudioStreamPlayer2D" parent="Player/Sounds/PowerUpSounds"]
+stream = ExtResource( 46 )
 [connection signal="animation_finished" from="Player/Animation" to="Player" method="_on_Animation_animation_finished"]
