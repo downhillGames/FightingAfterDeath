@@ -14,7 +14,7 @@ This project was completed for the Godot Wild Jam #17 hosted on itch.io(https://
 
 > Second chances
 
-The game was created to fir the theme always having a second chance to get back into the fight after dying.
+The game was created to fit the theme by always having a second chance to get back into the fight after dying.
 
 Prepare to fight  to the death and beyond in this SSB inspired, all out arena brawler.  Each player is equipped with 2 attacks, a shield, and the ability to gain various powers-ups by collecting treasure chests that randomly spawn into the arena.
 
